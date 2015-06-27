@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "Detgails")
+@Table(name = "Details")
 @Access(value = AccessType.FIELD)
 public class Details {
 
@@ -38,6 +38,14 @@ public class Details {
     private long mobile;
     @Column(name = "alternate_number")
     private long alternateNumber;
+
+    @Column(name = "center_id")
+    private long centerId;
+
+    @Column(name = "image")
+    @Lob
+    private String image;
+
 
 
     public void Details() {
@@ -85,12 +93,12 @@ public class Details {
         this.mothersName = mothersName;
     }
 
-    public void setFathersName(String fathersName) {
-        this.fathersName = fathersName;
-    }
-
     public String getFathersName() {
         return fathersName;
+    }
+
+    public void setFathersName(String fathersName) {
+        this.fathersName = fathersName;
     }
 
     public long getMobile() {
@@ -109,4 +117,27 @@ public class Details {
         this.alternateNumber = alternateNumber;
     }
 
+    @Override
+    public String toString() {
+        return "Details{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", city='" + city + '\'' +
+                ", address='" + address + '\'' +
+                ", fathersName='" + fathersName + '\'' +
+                ", mothersName='" + mothersName + '\'' +
+                ", gender='" + gender + '\'' +
+                ", mobile=" + mobile +
+                ", alternateNumber=" + alternateNumber +
+                ", centerId=" + centerId +
+                '}';
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }

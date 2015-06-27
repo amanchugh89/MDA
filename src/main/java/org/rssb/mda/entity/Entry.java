@@ -1,21 +1,21 @@
 package org.rssb.mda.entity;
 
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
  * Created by rs on 20/6/15.
  */
+@Entity
+@Table(name = "Entry")
+@Access(value = AccessType.FIELD)
 public class Entry {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int uId;
+    private long uId;
     @Column(name = "details_id")
     private long detailsId;
 
@@ -28,7 +28,10 @@ public class Entry {
     @Column(name="sign_out")
     private Date singOut;
 
-    public int getuId()
+    @Column(name = "counter_id")
+    private int counterId;
+
+    public long getuId()
     {
         return uId;
     }

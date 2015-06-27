@@ -1,9 +1,6 @@
 package org.rssb.mda.dao;
 
-import org.bhati.model.Details;
-import org.bhati.util.HibernateUtil;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import org.rssb.mda.entity.Details;
 
 /**
  * Created by rs on 26/6/15.
@@ -12,7 +9,7 @@ public class DetailsDAO {
 
     public void addDetails(Details details)
     {
-        Transaction tnx = null;
+       /* Transaction tnx = null;
         Session session = HibernateUtil.getSessionFactory().openSession();
         try {
             tnx = session.beginTransaction();
@@ -25,12 +22,12 @@ public class DetailsDAO {
         } finally {
             session.flush();
             session.close();
-        }
+        }*/
     }
 
     public void updateDetails(Details details)
     {
-        Transaction tnx = null;
+      /*  Transaction tnx = null;
         Session session = HibernateUtil.getSessionFactory().openSession();
         try {
             tnx = session.beginTransaction();
@@ -43,7 +40,7 @@ public class DetailsDAO {
         } finally {
             session.flush();
             session.close();
-        }
+        }*/
     }
 
 }

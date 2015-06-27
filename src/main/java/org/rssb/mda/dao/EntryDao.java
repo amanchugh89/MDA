@@ -1,9 +1,5 @@
 package org.rssb.mda.dao;
 
-import org.bhati.model.Entry;
-import org.bhati.util.HibernateUtil;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
 import org.rssb.mda.entity.Entry;
 
 /**
@@ -12,7 +8,7 @@ import org.rssb.mda.entity.Entry;
 public class EntryDao {
     public void  insertEntry(Entry entry)
     {
-        Transaction tnx = null;
+      /*  Transaction tnx = null;
         Session session = HibernateUtil.getSessionFactory().openSession();
         try {
             tnx = session.beginTransaction();
@@ -25,12 +21,12 @@ public class EntryDao {
         } finally {
             session.flush();
             session.close();
-        }
+        }*/
     }
 
     public void  updateEntry(Entry entry)
     {
-        Transaction tnx = null;
+     /*   Transaction tnx = null;
         Session session = HibernateUtil.getSessionFactory().openSession();
         try {
             tnx = session.beginTransaction();
@@ -43,12 +39,12 @@ public class EntryDao {
         } finally {
             session.flush();
             session.close();
-        }
+        }*/
     }
 
     public void  deleteEntry(Entry entry)
     {
-        Transaction tnx = null;
+       /* Transaction tnx = null;
         Session session = HibernateUtil.getSessionFactory().openSession();
         try {
             tnx = session.beginTransaction();
@@ -61,6 +57,6 @@ public class EntryDao {
         } finally {
             session.flush();
             session.close();
-        }
+        }*/
     }
 }
