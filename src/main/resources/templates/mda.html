@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+    <script language="JavaScript" src="../js/scriptcam.js"></script>
+    <script language="JavaScript" src="../js/webcam.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+    <link href='../static/css/webcam.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<select id="cameraNames" size="1" onChange="$.scriptcam.changeCamera($('#cameraNames').val());" style="float: right"></select>
+<div id="webcam" style="float: left; top: 50px">
+
+
+
+
+
+
+</div>
+<!--<form action="rest/mda/saveDetails", method=POST id="detailsForm">
+    <label>Phone</label>
+    <input type="text">
+    <br>
+    <label>Addr</label>
+    <input type="text">
+    <br>
+    <label>Mother's Name</label>
+    <input type="text">
+    <br>
+    <label>Fathers Name</label>
+    <input type="text">
+    <br>
+    <label>Gender</label>
+    <option value="M">M</option>
+    <option>F</option>
+    <br>
+<input type="hidden" id="image">
+
+</form>-->
+<div class="form-style-10" style="display: inline-block; margin-left: 40px">
+    <form action="rest/mda/saveDetails", method=POST id="detailsForm">
+        <input type="hidden"  name="image" id="image">
+        <div class="section"><span>1</span>Phone, First Name &amp; Address </div>
+        <div class="inner-wrap">
+            <label>Phone Number <input type="text"  name="phone" /></label>
+            <label>Your Full Name <input type="text"  name="name" /></label>
+            <label>Address <textarea  name="addr"></textarea></label>
+
+        </div>
+
+
+        <div class="button-section">
+            <button type="submit" id="saveImage"  >Save</button>
+
+        </div>
+    </form>
+</div>
+<!--<select id="microphoneNames" size="1" onChange="$.scriptcam.changeMicrophone($('#microphoneNames').val());"></select>-->
+</body>
+</html>

@@ -1,0 +1,4 @@
+org\rssb\mda\entity\MobileDetail.class
+org\rssb\mda\Application.class
+org\rssb\mda\codes\MDAResponse.class
+org\rssb\mda\rest\MobileDepositController.class
