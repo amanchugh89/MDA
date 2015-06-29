@@ -39,7 +39,13 @@ $(document).ready(function() {
             url: SEND_DETAILS,
             data: $( "input, textarea" ).serialize(),
             contentType: "application/x-www-form-urlencoded",
-            success: function(data){ console.log(data);}
+            success: function(data){ console.log(data);
+            $("#response").append(data);
+                $(':input','#detailsForm')
+                    .not(':button, :submit, :reset, :hidden')
+                    .val('');
+            }
+
 
         });
        console.log($.scriptcam.getFrameAsBase64());
