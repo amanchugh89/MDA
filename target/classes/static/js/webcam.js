@@ -2,7 +2,7 @@
  * Created by esuchug on 19-06-2015.
  */
 
- var SEND_DETAILS ="rest/mda/mobileDetails" ;
+var SEND_DETAILS = "rest/mda/mobileDetails";
 
 $(document).ready(function() {
     $("#webcam").scriptcam({
