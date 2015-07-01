@@ -1,6 +1,5 @@
 package org.rssb.mda;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
@@ -12,12 +11,15 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+
+        new SpringApplicationBuilder(Application.class).profiles(System.getProperty("spring.profiles.active")).run(args);
+
 
     }
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(Application.class);
+
+        return application.profiles(System.getProperty("spring.profiles.active")).sources(Application.class);
     }
 }

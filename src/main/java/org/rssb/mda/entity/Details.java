@@ -30,23 +30,25 @@ public class Details {
 
     @Column(name = "mothers_name")
     private String mothersName;
-
     @Column(name = "gender")
     private String gender;
-
     @Column(name = "mobile")
     private long mobile;
     @Column(name = "alternate_number")
     private long alternateNumber;
-
     @Column(name = "center_id")
     private long centerId;
-
     @Column(name = "image")
     @Lob
     private String image;
 
+    public String getGender() {
+        return gender;
+    }
 
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
     public void Details() {
     }
@@ -86,7 +88,7 @@ public class Details {
     }
 
     public String getMothersName() {
-        return address;
+        return mothersName;
     }
 
     public void setMothersName(String mothersName) {

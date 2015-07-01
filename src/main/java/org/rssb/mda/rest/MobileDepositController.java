@@ -1,13 +1,17 @@
 package org.rssb.mda.rest;
 
-import org.rssb.mda.codes.MDAResponse;
 import org.rssb.mda.entity.Details;
-import org.rssb.mda.repository.DetailsRepo;
+import org.rssb.mda.exceptions.MDAResponse;
+import org.rssb.mda.exceptions.ValidationException;
+import org.rssb.mda.rest.helper.DepositService;
+import org.rssb.mda.rest.helper.RequestValidator;
+import org.rssb.mda.rest.types.MobileDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.core.MediaType;
+import java.util.List;
 
 /**
  * Created by esuchug on 27-06-2015.
@@ -17,31 +21,38 @@ import javax.ws.rs.core.MediaType;
 public class MobileDepositController {
 
     @Autowired
-    private DetailsRepo detailsRepo;
+    private DepositService depositService;
 
 
     @RequestMapping(value = "/mobileDetails", method = RequestMethod.POST)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public MDAResponse insert(@ModelAttribute Details mobileDetail) {
+    public MobileDetails insert(@ModelAttribute Details mobileDetail) throws ValidationException{
 
-        detailsRepo.save(mobileDetail);
-        return MDAResponse.OK;
+            RequestValidator.validateMobileRequest(mobileDetail);
+        return  depositService.submitDetails(mobileDetail);
     }
 
     @RequestMapping(value = "/mobileDetails/mobile={mobile}", method = RequestMethod.GET)
-    public Details fetchDetailByMobile(@PathVariable Long mobile) {
-        System.out.println(mobile);
-        System.out.println(detailsRepo.findByMobile(mobile));
-        return detailsRepo.findByMobile(mobile);
+    public MobileDetails fetchDetailByMobile(@PathVariable Long mobile) throws ValidationException {
+       RequestValidator.validateMobile(mobile);
+        return depositService.getDetailsByNo(mobile);
     }
 
     @RequestMapping(value = "/mobileDetails/{Id}", method = RequestMethod.GET)
-    public Details fetchDetailById(@PathVariable Long Id) {
-        System.out.println(Id);
-        System.out.println(detailsRepo.findOne(Id));
-        return detailsRepo.findOne(Id);
+    public MobileDetails fetchDetailById(@PathVariable Long Id) throws ValidationException{
+        return depositService.getDetailsById(Id);
     }
 
+    @RequestMapping(value = "/mobileDetails/name={name}", method = RequestMethod.GET)
+    public MobileDetails fetchDetailByName(@PathVariable String name) throws ValidationException {
+        RequestValidator.validateName(name);
+        return depositService.getDetailsByName(name);
+    }
 
+    @RequestMapping(value = "/mobileDetails/altNo={altNo}", method = RequestMethod.GET)
+    public MobileDetails fetchDetailByAltMobile(@PathVariable Long altNo) throws ValidationException {
+        RequestValidator.validateMobile(altNo);
+        return depositService.getDetailsByAltNo(altNo);
+    }
 
 }
