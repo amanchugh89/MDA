@@ -12,6 +12,8 @@ spring.view.prefix: /templates
 spring.view.suffix: .html
 security.basic.enabled=false
 logging.level.org.springframework.security=DEBUG
-
+<<<<<<< HEAD
+mypath=C:\MDA
+=======
 mypath=/tmp
-
+>>>>>>> profile
