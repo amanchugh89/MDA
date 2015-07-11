@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bf36ce8-a5a9-4377-bc1b-a055496a285a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/rssb/mda/config/WebSecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/org/rssb/mda/config/WebSecurityConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/index.html" afterPath="$PROJECT_DIR$/target/classes/static/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_35.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/application-aman.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_3_1_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MDA.iml" afterPath="$PROJECT_DIR$/MDA.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MDA.iws" />
@@ -54,14 +56,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MobileDepositController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MobileDepositController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/rssb/mda/rest/MobileDepositController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.5748032" vertical-offset="729" max-vertical-offset="1309">
+            <state vertical-scroll-proportion="0.0" vertical-offset="729" max-vertical-offset="1309">
               <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
               <folding>
-                <element signature="e#827#828#0" expanded="true" />
-                <element signature="e#913#914#0" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -70,9 +71,11 @@
       <file leaf-file-name="RequestValidator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/rssb/mda/rest/helper/RequestValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-              <caret line="42" column="71" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="867">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,13 +93,9 @@
       <file leaf-file-name="DepositServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/rssb/mda/rest/helper/DepositServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5555553" vertical-offset="408" max-vertical-offset="1938">
+            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1938">
               <caret line="36" column="5" selection-start-line="34" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#899#900#0" expanded="true" />
-                <element signature="e#985#986#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,8 +103,38 @@
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+            <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="340">
               <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application-aman.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-aman.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="374">
+              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2925532" vertical-offset="961" max-vertical-offset="1564">
+              <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/rssb/mda/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="493">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -114,8 +143,8 @@
       <file leaf-file-name="application-sumi.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application-sumi.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="374">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -145,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/main/java/org/rssb/mda/util/HibernateUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/rssb/mda/dao/DetailsDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/rssb/mda/dao/EntryDao.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/MDA.iml" />
         <option value="$PROJECT_DIR$/src/main/java/org/rssb/mda/controllers/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/rssb/mda/config/WebMvcConfig.java" />
@@ -172,6 +200,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/org/rssb/mda/rest/helper/DepositServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/rssb/mda/rest/MobileDepositController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-aman.properties" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -217,6 +247,22 @@
     <option name="width" value="1365" />
     <option name="height" value="724" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -242,12 +288,17 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="MDA" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -340,7 +391,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -354,12 +404,12 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="options.lastSelected" value="settings.github" />
+    <property name="options.lastSelected" value="RemoteServers" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.62255466" />
     <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/org/postgresql/postgresql/9.4-1201-jdbc41" />
@@ -367,6 +417,9 @@
     <property name="LayoutCode.rearrangeEntriesJava" value="true" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -402,7 +455,7 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="org.rssb.mda.Application" />
-      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=sumi" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=aman" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -749,8 +802,8 @@
       <method />
     </configuration>
     <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Application.Application" />
-      <item index="1" class="java.lang.String" itemvalue="Heroku Deployment.Heroku Deployment" />
+      <item index="0" class="java.lang.String" itemvalue="Heroku Deployment.Heroku Deployment" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Application" />
       <item index="2" class="java.lang.String" itemvalue="JAR Application.MDA-1.0-SNAPSHOT.jar" />
     </list>
     <recent_temporary>
@@ -779,7 +832,8 @@
       <workItem from="1435682337702" duration="9051000" />
       <workItem from="1435767900943" duration="1737000" />
       <workItem from="1436368312965" duration="4864000" />
-      <workItem from="1436557606923" duration="10041000" />
+      <workItem from="1436557606923" duration="16930000" />
+      <workItem from="1436620868295" duration="149000" />
     </task>
     <task id="LOCAL-00001" summary="repository addition">
       <created>1435435207632</created>
@@ -811,11 +865,17 @@
       <option name="project" value="LOCAL" />
       <updated>1436609942720</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Deploy">
+      <created>1436610143065</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1436610143065</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63827000" />
+    <option name="totallyTimeSpent" value="70865000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -844,9 +904,9 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32838285" sideWeight="0.5003802" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5003802" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32927758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32927758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12386018" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -854,25 +914,58 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32838285" sideWeight="0.49961978" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.49961978" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32750398" sideWeight="0.49961567" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31518152" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31518152" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24790874" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32927758" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32750398" sideWeight="0.49961567" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5003802" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32927758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12386018" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24942966" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.49961978" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32750398" sideWeight="0.49961567" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31518152" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838285" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24790874" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -904,21 +997,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/rssb/mda/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="630">
-          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/rssb/mda/exceptions/MDAResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="378">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="252">
@@ -938,8 +1016,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="612">
           <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
           <folding>
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -955,7 +1032,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="630">
           <caret line="14" column="11" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1052,14 +1128,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/974b29e3/b6e19cf1-4438-46ae-837a-d10672b9f798/d30gm8tkfl46nb.public.details">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1088,14 +1164,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33275864" vertical-offset="164" max-vertical-offset="1819">
           <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="831" max-vertical-offset="1411">
-          <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,7 +1206,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3810345" vertical-offset="0" max-vertical-offset="580">
           <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1146,7 +1213,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
           <caret line="8" column="386" selection-start-line="8" selection-start-column="386" selection-end-line="8" selection-end-column="386" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1154,7 +1220,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
           <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1162,18 +1227,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
           <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
-          <folding>
-            <element signature="e#1206#1207#0" expanded="true" />
-            <element signature="e#1242#1243#0" expanded="true" />
-            <element signature="e#1282#1283#0" expanded="true" />
-            <element signature="e#1311#1312#0" expanded="true" />
-            <element signature="e#1362#1363#0" expanded="true" />
-            <element signature="e#1398#1399#0" expanded="true" />
-            <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1522#1523#0" expanded="true" />
-            <element signature="e#1560#1561#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1181,17 +1234,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1292">
           <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/rssb/mda/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-          <caret line="14" column="109" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="109" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1199,7 +1241,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="527">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,9 +1248,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1217,10 +1255,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33161953" vertical-offset="534" max-vertical-offset="1717">
           <caret line="64" column="11" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
-          <folding>
-            <element signature="e#1663#1664#0" expanded="false" />
-            <element signature="e#1693#1694#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1228,7 +1262,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1236,15 +1269,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.230769" vertical-offset="610" max-vertical-offset="1173">
           <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/rssb/mda/rest/helper/RequestValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <caret line="42" column="71" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1252,7 +1276,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
           <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1260,9 +1283,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1270,10 +1290,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.1028278" vertical-offset="1001" max-vertical-offset="2023">
           <caret line="137" column="18" selection-start-line="137" selection-start-column="18" selection-end-line="137" selection-end-column="18" />
-          <folding>
-            <element signature="e#3143#3144#0" expanded="true" />
-            <element signature="e#3171#3172#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1285,6 +1301,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/rssb/mda/rest/helper/DepositServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1938">
+          <caret line="36" column="5" selection-start-line="34" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/rssb/mda/rest/MobileDepositController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="729" max-vertical-offset="1309">
+          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
@@ -1293,34 +1327,194 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/rssb/mda/rest/helper/RequestValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="867">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application-sumi.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="13" />
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/rssb/mda/rest/helper/DepositServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/rssb/mda/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5555553" vertical-offset="408" max-vertical-offset="1938">
-          <caret line="36" column="5" selection-start-line="34" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#985#986#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/rssb/mda/rest/MobileDepositController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-aman.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5748032" vertical-offset="729" max-vertical-offset="1309">
-          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-          <folding>
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/org.rssb:MDA:1.0-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>org.rssb:MDA:1.0-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.data:spring-data-jpa:jar:1.7.2.RELEASE/org.slf4j:jcl-over-slf4j:jar:1.7.12</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:1.2.4.RELEASE/ch.qos.logback:logback-classic:jar:1.1.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.media:jersey-media-json-jackson:jar:2.14/com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.3.2/com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.3.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.ext:jersey-spring3:jar:2.14/org.glassfish.hk2:hk2:jar:2.4.0-b06/org.glassfish.hk2:class-model:jar:2.4.0-b06</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-ws:jar:1.2.4.RELEASE/org.springframework:spring-oxm:jar:4.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.ext:jersey-spring3:jar:2.14/org.glassfish.hk2:spring-bridge:jar:2.4.0-b06</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.2.4.RELEASE/org.springframework:spring-webmvc:jar:4.1.6.RELEASE</node>
+            <node x="" y="">org.rssb:MDA:1.0-SNAPSHOT</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.2.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE/org.springframework.data:spring-data-rest-webmvc:jar:2.2.2.RELEASE/com.github.fge:json-patch:jar:1.7/com.github.fge:jackson-coreutils:jar:1.6</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:1.2.4.RELEASE/org.springframework.security:spring-security-web:jar:3.2.7.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.2.4.RELEASE/org.apache.tomcat.embed:tomcat-embed-logging-juli:jar:8.0.23</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.2.4.RELEASE/org.hamcrest:hamcrest-library:jar:1.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.data:spring-data-jpa:jar:1.7.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-ws:jar:1.2.4.RELEASE/org.springframework:spring-jms:jar:4.1.6.RELEASE/org.springframework:spring-messaging:jar:4.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-ws:jar:1.2.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.hibernate:hibernate-entitymanager:jar:4.3.10.Final/org.javassist:javassist:jar:3.18.1-GA</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.ext:jersey-spring3:jar:2.14/org.glassfish.hk2:hk2:jar:2.4.0-b06/org.glassfish.hk2:hk2-config:jar:2.4.0-b06/org.jvnet:tiger-types:jar:1.4</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.2.4.RELEASE/org.apache.tomcat.embed:tomcat-embed-websocket:jar:8.0.23</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-solr:jar:1.2.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.hibernate:hibernate-validator:jar:5.1.3.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-ws:jar:1.2.4.RELEASE/org.springframework:spring-jms:jar:4.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-autoconfigure:jar:1.2.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.media:jersey-media-json-jackson:jar:2.14</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.ext:jersey-spring3:jar:2.14/org.glassfish.hk2:hk2:jar:2.4.0-b06/org.glassfish.hk2:hk2-config:jar:2.4.0-b06</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.2.4.RELEASE/junit:junit:jar:4.12</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:1.2.4.RELEASE/org.slf4j:jul-to-slf4j:jar:1.7.12</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.hibernate:hibernate-validator:jar:5.1.3.Final/javax.validation:validation-api:jar:1.1.0.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:1.2.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.hibernate:hibernate-entitymanager:jar:4.3.10.Final/org.hibernate:hibernate-core:jar:4.3.10.Final/org.jboss:jandex:jar:1.1.0.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE/org.springframework.data:spring-data-rest-webmvc:jar:2.2.2.RELEASE/org.springframework.data:spring-data-rest-core:jar:2.2.2.RELEASE/org.springframework.plugin:spring-plugin-core:jar:1.1.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE/org.springframework.data:spring-data-rest-webmvc:jar:2.2.2.RELEASE/com.github.fge:json-patch:jar:1.7/com.github.fge:jackson-coreutils:jar:1.6/com.github.fge:msg-simple:jar:1.1/com.github.fge:btf:jar:1.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE/org.springframework:spring-tx:jar:4.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.ext:jersey-spring3:jar:2.14/org.glassfish.hk2:hk2:jar:2.4.0-b06</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot:jar:1.2.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:1.2.4.RELEASE/org.springframework.security:spring-security-config:jar:3.2.7.RELEASE/org.springframework.security:spring-security-core:jar:3.2.7.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.core:jersey-server:jar:2.14/org.glassfish.hk2:hk2-locator:jar:2.4.0-b06</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-solr:jar:1.2.4.RELEASE/org.apache.httpcomponents:httpmime:jar:4.3.6</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.ext:jersey-spring3:jar:2.14/org.glassfish.hk2:hk2:jar:2.4.0-b06/org.glassfish.hk2:class-model:jar:2.4.0-b06/org.glassfish.hk2.external:asm-all-repackaged:jar:2.4.0-b06</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.hibernate:hibernate-entitymanager:jar:4.3.10.Final/org.hibernate.common:hibernate-commons-annotations:jar:4.0.5.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.core:jersey-server:jar:2.14/javax.ws.rs:javax.ws.rs-api:jar:2.0.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-jdbc:jar:1.2.4.RELEASE/org.apache.tomcat:tomcat-jdbc:jar:8.0.23/org.apache.tomcat:tomcat-juli:jar:8.0.23</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.hibernate:hibernate-entitymanager:jar:4.3.10.Final/org.hibernate:hibernate-core:jar:4.3.10.Final/antlr:antlr:jar:2.7.7</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework:spring-orm:jar:4.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework:spring-aspects:jar:4.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE/org.springframework.data:spring-data-rest-webmvc:jar:2.2.2.RELEASE/com.github.fge:json-patch:jar:1.7</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE/org.springframework.data:spring-data-rest-webmvc:jar:2.2.2.RELEASE/com.github.fge:json-patch:jar:1.7/com.google.code.findbugs:jsr305:jar:2.0.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-solr:jar:1.2.4.RELEASE/org.springframework.data:spring-data-solr:jar:1.3.2.RELEASE/org.apache.commons:commons-lang3:jar:3.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:1.2.4.RELEASE/org.springframework:spring-context:jar:4.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.2.4.RELEASE/org.apache.tomcat.embed:tomcat-embed-el:jar:8.0.23</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-ws:jar:1.2.4.RELEASE/org.springframework.ws:spring-ws-core:jar:2.2.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.2.4.RELEASE/org.springframework:spring-test:jar:4.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.hibernate:hibernate-entitymanager:jar:4.3.10.Final/dom4j:dom4j:jar:1.6.1/xml-apis:xml-apis:jar:1.0.b2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE/org.springframework.data:spring-data-rest-webmvc:jar:2.2.2.RELEASE/org.springframework.data:spring-data-rest-core:jar:2.2.2.RELEASE/org.springframework.hateoas:spring-hateoas:jar:0.16.0.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.hibernate:hibernate-entitymanager:jar:4.3.10.Final/org.jboss.logging:jboss-logging-annotations:jar:1.2.0.Beta1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.core:jersey-server:jar:2.14/org.glassfish.jersey.core:jersey-client:jar:2.14</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.2.4.RELEASE/org.mockito:mockito-core:jar:1.10.19</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.media:jersey-media-json-jackson:jar:2.14/com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.3.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE/org.springframework.data:spring-data-rest-webmvc:jar:2.2.2.RELEASE/com.github.fge:json-patch:jar:1.7/com.github.fge:jackson-coreutils:jar:1.6/com.github.fge:msg-simple:jar:1.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.core:jersey-server:jar:2.14/org.glassfish.hk2.external:javax.inject:jar:2.4.0-b06</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.4.6/com.fasterxml.jackson.core:jackson-core:jar:2.4.6</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-solr:jar:1.2.4.RELEASE/org.apache.solr:solr-solrj:jar:4.7.2/commons-io:commons-io:jar:2.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-jdbc:jar:1.2.4.RELEASE/org.springframework:spring-jdbc:jar:4.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE/org.springframework.data:spring-data-rest-webmvc:jar:2.2.2.RELEASE/com.github.fge:json-patch:jar:1.7/com.github.fge:jackson-coreutils:jar:1.6/com.google.guava:guava:jar:16.0.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-ws:jar:1.2.4.RELEASE/org.springframework.ws:spring-ws-core:jar:2.2.1.RELEASE/org.springframework.ws:spring-xml:jar:2.2.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:1.2.4.RELEASE/org.springframework:spring-beans:jar:4.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.hibernate:hibernate-entitymanager:jar:4.3.10.Final/org.hibernate.javax.persistence:hibernate-jpa-2.1-api:jar:1.0.0.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE/org.springframework.data:spring-data-rest-webmvc:jar:2.2.2.RELEASE/org.springframework.data:spring-data-rest-core:jar:2.2.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.hibernate:hibernate-entitymanager:jar:4.3.10.Final/dom4j:dom4j:jar:1.6.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.core:jersey-server:jar:2.14/org.glassfish.jersey.core:jersey-common:jar:2.14/org.glassfish.hk2:osgi-resource-locator:jar:1.0.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:1.2.4.RELEASE/org.springframework.security:spring-security-config:jar:3.2.7.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-solr:jar:1.2.4.RELEASE/org.apache.solr:solr-solrj:jar:4.7.2/org.apache.httpcomponents:httpclient:jar:4.3.6</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.springframework:spring-web:jar:4.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.core:jersey-server:jar:2.14/org.glassfish.hk2:hk2-api:jar:2.4.0-b06</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.data:spring-data-jpa:jar:1.7.2.RELEASE/org.springframework.data:spring-data-commons:jar:1.9.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.containers:jersey-container-servlet:jar:2.14</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-ws:jar:1.2.4.RELEASE/org.springframework.ws:spring-ws-support:jar:2.2.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.core:jersey-server:jar:2.14</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-solr:jar:1.2.4.RELEASE/org.apache.solr:solr-solrj:jar:4.7.2/org.codehaus.woodstox:wstx-asl:jar:3.2.7</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.hibernate:hibernate-entitymanager:jar:4.3.10.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.core:jersey-server:jar:2.14/org.glassfish.jersey.core:jersey-common:jar:2.14/org.glassfish.jersey.bundles.repackaged:jersey-guava:jar:2.14</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.ext:jersey-spring3:jar:2.14/org.glassfish.hk2:hk2:jar:2.4.0-b06/org.glassfish.hk2:hk2-runlevel:jar:2.4.0-b06</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.core:jersey-server:jar:2.14/org.glassfish.jersey.core:jersey-common:jar:2.14</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-solr:jar:1.2.4.RELEASE/org.apache.solr:solr-solrj:jar:4.7.2/org.apache.httpcomponents:httpcore:jar:4.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.2.4.RELEASE/org.mockito:mockito-core:jar:1.10.19/org.objenesis:objenesis:jar:2.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:1.2.4.RELEASE/org.springframework.security:spring-security-config:jar:3.2.7.RELEASE/aopalliance:aopalliance:jar:1.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE/org.springframework.data:spring-data-rest-webmvc:jar:2.2.2.RELEASE/org.springframework.data:spring-data-rest-core:jar:2.2.2.RELEASE/org.atteo:evo-inflector:jar:1.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE/org.springframework.data:spring-data-rest-webmvc:jar:2.2.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-aop:jar:1.2.4.RELEASE/org.aspectj:aspectjweaver:jar:1.8.5</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.2.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:1.2.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.ext:jersey-spring3:jar:2.14/org.glassfish.hk2:hk2:jar:2.4.0-b06/org.glassfish.hk2:config-types:jar:2.4.0-b06</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.2.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-solr:jar:1.2.4.RELEASE/org.apache.solr:solr-solrj:jar:4.7.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.hibernate:hibernate-entitymanager:jar:4.3.10.Final/org.hibernate:hibernate-core:jar:4.3.10.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-solr:jar:1.2.4.RELEASE/org.springframework.data:spring-data-solr:jar:1.3.2.RELEASE/commons-collections:commons-collections:jar:3.2.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.ext:jersey-bean-validation:jar:2.14</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-solr:jar:1.2.4.RELEASE/org.springframework.data:spring-data-solr:jar:1.3.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:1.2.4.RELEASE/org.springframework:spring-expression:jar:4.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-solr:jar:1.2.4.RELEASE/org.apache.solr:solr-solrj:jar:4.7.2/org.apache.zookeeper:zookeeper:jar:3.4.5</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.data:spring-data-jpa:jar:1.7.2.RELEASE/org.slf4j:slf4j-api:jar:1.7.12</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.hibernate:hibernate-entitymanager:jar:4.3.10.Final/org.jboss.logging:jboss-logging:jar:3.1.3.GA</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.core:jersey-server:jar:2.14/org.glassfish.hk2:hk2-api:jar:2.4.0-b06/org.glassfish.hk2.external:aopalliance-repackaged:jar:2.4.0-b06</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.hibernate:hibernate-validator:jar:5.1.3.Final/com.fasterxml:classmate:jar:1.0.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.ext:jersey-spring3:jar:2.14/org.glassfish.hk2:hk2:jar:2.4.0-b06/org.glassfish.hk2:core:jar:2.4.0-b06</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:1.2.4.RELEASE/org.slf4j:log4j-over-slf4j:jar:1.7.12</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-aop:jar:1.2.4.RELEASE/org.aspectj:aspectjrt:jar:1.8.5</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:1.2.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:1.2.4.RELEASE/org.yaml:snakeyaml:jar:1.14</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.2.4.RELEASE/org.apache.tomcat.embed:tomcat-embed-core:jar:8.0.23</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-solr:jar:1.2.4.RELEASE/org.apache.solr:solr-solrj:jar:4.7.2/org.noggit:noggit:jar:0.5</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-jdbc:jar:1.2.4.RELEASE/org.apache.tomcat:tomcat-jdbc:jar:8.0.23</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/javax.transaction:javax.transaction-api:jar:1.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:1.2.4.RELEASE/ch.qos.logback:logback-classic:jar:1.1.3/ch.qos.logback:logback-core:jar:1.1.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.core:jersey-server:jar:2.14/javax.annotation:javax.annotation-api:jar:1.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:1.2.4.RELEASE/org.springframework:spring-aop:jar:4.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.containers:jersey-container-servlet-core:jar:2.14</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.core:jersey-server:jar:2.14/org.glassfish.hk2:hk2-api:jar:2.4.0-b06/org.glassfish.hk2:hk2-utils:jar:2.4.0-b06</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.2.4.RELEASE/org.hamcrest:hamcrest-core:jar:1.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-solr:jar:1.2.4.RELEASE/org.springframework.data:spring-data-solr:jar:1.3.2.RELEASE/org.apache.httpcomponents:httpclient-cache:jar:4.2.6</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.4.6</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.ext:jersey-spring3:jar:2.14</node>
+            <node x="" y="">org.postgresql:postgresql:jar:9.4-1201-jdbc41</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework:spring-core:jar:4.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.media:jersey-media-json-jackson:jar:2.14/com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.3.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-aop:jar:1.2.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:1.2.4.RELEASE/org.springframework.boot:spring-boot-starter-jdbc:jar:1.2.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-rest:jar:1.2.4.RELEASE/com.fasterxml.jackson.core:jackson-annotations:jar:2.4.6</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-jersey:jar:1.2.4.RELEASE/org.glassfish.jersey.ext:jersey-spring3:jar:2.14/org.glassfish.hk2:hk2:jar:2.4.0-b06/org.glassfish.hk2:hk2-config:jar:2.4.0-b06/org.glassfish.hk2.external:bean-validator:jar:2.4.0-b06</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.10838323353293414" x="443.0" y="1500.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2925532" vertical-offset="961" max-vertical-offset="1564">
+          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1401,11 +1595,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <last-edited>mysql:mysql-connector-java:3.1.12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.62255466" />
               </list>
             </option>
           </splitter-proportions>
