@@ -16,7 +16,11 @@ public class ValidationException extends Exception {
     MDAResponse response;
 
     public ValidationException(MDAResponse response){
+        super(response.getDesc());
         this.response = response;
 
+
     }
+
+
 }

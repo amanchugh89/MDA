@@ -27,19 +27,21 @@ public class RequestValidator {
     }
 
    public static void validateName(String name) throws ValidationException {
-        if(!name.matches("^[\\p{L} .'-]+$")  )
+        if(name == null || !name.matches("^[\\p{L} .'-]+$")  )
             throw new ValidationException(MDAResponse.NAME_VALIDATION_ERROR);
 
     }
 
    public static void validateAddress(String address) throws ValidationException {
-        if(!address.matches("^[\\p{L} .'-]+$")  )
+        if(address == null || !address.matches("^[\\p{L} .'-]+$")  )
             throw new ValidationException(MDAResponse.ADDRESS_VALIDATION_ERROR);
 
     }
 
    public static void validateGender(String gender) throws ValidationException {
-if(!gender.equalsIgnoreCase("M") && !gender.equalsIgnoreCase("F"))
+if(gender == null ||!gender.equalsIgnoreCase("M") && !gender.equalsIgnoreCase("F"))
     throw new ValidationException(MDAResponse.GENDER_VALIDATION_ERROR);
     }
+
+
 }

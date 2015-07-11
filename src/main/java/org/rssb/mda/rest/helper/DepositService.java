@@ -1,7 +1,9 @@
 package org.rssb.mda.rest.helper;
 
 import org.rssb.mda.entity.Details;
-import org.rssb.mda.rest.types.MobileDetails;
+import org.rssb.mda.exceptions.ValidationException;
+
+import java.util.List;
 
 /**
  * Created by esuchug on 30-06-2015.
@@ -9,17 +11,17 @@ import org.rssb.mda.rest.types.MobileDetails;
 
 public interface DepositService {
 
-    MobileDetails submitDetails(Details mobileDetails);
+    Details submitDetails(Details mobileDetails) throws ValidationException;
 
-    MobileDetails getDetailsByNo(Long mobile);
+    Details getDetailsByNo(Long mobile);
 
-    MobileDetails getDetailsById(Long Id);
+    Details getDetailsById(Long Id);
 
-    MobileDetails getDetailsByAltNo(Long altNo);
+    List<Details> getDetailsByAltNo(Long altNo);
 
-    MobileDetails getDetailsByName(String name);
+    List<Details> getDetailsByName(String name);
 
-    MobileDetails updateDetail(MobileDetails detail);
+    Details updateDetail(Details detail);
 
 
 }

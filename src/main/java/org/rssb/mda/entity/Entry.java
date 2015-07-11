@@ -2,12 +2,14 @@ package org.rssb.mda.entity;
 
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
  * Created by rs on 20/6/15.
  */
 @Entity
+@NamedQuery(name = "Entry.findPendingSignOut", query = "SELECT e FROM Entry e WHERE e.detailsId = ?1 AND e.signOut IS NULL AND e.signIn IS NOT NULL" )
 @Table(name = "Entry")
 @Access(value = AccessType.FIELD)
 public class Entry {
@@ -23,10 +25,10 @@ public class Entry {
     private long tokenId;
 
     @Column(name="sign_in")
-    private Date signIn ;
+    private LocalDateTime signIn ;
 
     @Column(name="sign_out")
-    private Date singOut;
+    private LocalDateTime signOut;
 
     @Column(name = "counter_id")
     private int counterId;
@@ -61,4 +63,19 @@ public class Entry {
         this.tokenId=tokenId;
     }
 
+    public LocalDateTime getSignIn() {
+        return signIn;
+    }
+
+    public void setSignIn(LocalDateTime signIn) {
+        this.signIn = signIn;
+    }
+
+    public LocalDateTime getSignOut() {
+        return signOut;
+    }
+
+    public void setSignOut(LocalDateTime signOut) {
+        this.signOut = signOut;
+    }
 }

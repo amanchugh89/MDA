@@ -1,16 +1,20 @@
 package org.rssb.mda.rest.helper;
 
 import org.rssb.mda.entity.Details;
-import org.rssb.mda.entity.Entry;
+import org.rssb.mda.exceptions.MDAResponse;
+import org.rssb.mda.exceptions.ValidationException;
 import org.rssb.mda.repository.DetailsRepo;
 import org.rssb.mda.repository.EntryRepo;
-import org.rssb.mda.rest.types.MobileDetails;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by esuchug on 30-06-2015.
@@ -24,61 +28,81 @@ public class DepositServiceImpl implements DepositService {
     @Autowired
     private EntryRepo entryRepo;
 
-    @Override
-    public MobileDetails submitDetails(Details mobileDetails) {
-        //submit detaild to db
+    @Value("${mypath}")
+    private String uploadDir ;
 
-        //save image
-        //return
-        return null;
+
+    private void printTime(String sten){
+        System.out.println(System.currentTimeMillis()+ "-----Time for "+ sten);
     }
 
     @Override
-    public MobileDetails getDetailsByNo(Long mobile) {
-        Map<Details,List<Entry>> detailsListMap = new HashMap<>();
-        MobileDetails mobileDetails = new MobileDetails(detailsListMap);
+    public Details submitDetails(Details mobileDetails) throws ValidationException {
+       // String uploadFilePath = System.getProperty("uploadDir");
+        if (uploadDir != null) {
+            File fileSaveDir = new File(uploadDir);
+            if (!fileSaveDir.exists()) {
+                fileSaveDir.mkdirs();
+            }
+            System.out.println("Upload File Directory=" + fileSaveDir.getAbsolutePath());
+            String   fileName = fileSaveDir.getAbsoluteFile()+ File.separator + getFileName(mobileDetails);
+            try {
+                printTime("imaage write");
+                FileWriter fw = new FileWriter(fileName);
+                BufferedWriter bw = new BufferedWriter(fw);
+                bw.write(mobileDetails.getImage());
+                bw.close();
+printTime("image write end");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+printTime("db store");
+            mobileDetails.setImage(fileName);
+            detailsRepo.save(mobileDetails);
+            printTime("Db store ebnd");
+        }
+        else
+        throw new ValidationException(MDAResponse.NO_RESPONSE);
+        return mobileDetails;
+    }
+
+    @Override
+    public Details getDetailsByNo(Long mobile) {
         Details details = detailsRepo.findByMobile(mobile);
-        detailsListMap.put(details, entryRepo.findByDetailsId(details.getId()));
-        return mobileDetails;
+        return details;
     }
 
     @Override
-    public MobileDetails getDetailsById(Long Id) {
-        Map<Details,List<Entry>> detailsListMap = new HashMap<>();
-        MobileDetails mobileDetails = new MobileDetails(detailsListMap);
+    public Details getDetailsById(Long Id) {
         Details details = detailsRepo.findOne(Id);
-         detailsListMap.put(details, entryRepo.findByDetailsId(details.getId()));
-        return mobileDetails;
+        return details;
     }
 
     @Override
-    public MobileDetails getDetailsByAltNo(Long altNo) {
-        Map<Details,List<Entry>> detailsListMap = new HashMap<>();
-        MobileDetails mobileDetails = new MobileDetails(detailsListMap);
+    public List<Details> getDetailsByAltNo(Long altNo) {
         List<Details> detailsList =detailsRepo.findByAlternateNumber(altNo);
-        detailsList.stream().forEach((p)->  detailsListMap.put(p, entryRepo.findByDetailsId(p.getId())));
-        return mobileDetails;
+        return detailsList;
     }
 
     @Override
-    public MobileDetails getDetailsByName(String name) {
-        Map<Details,List<Entry>> detailsListMap = new HashMap<>();
-        MobileDetails mobileDetails = new MobileDetails(detailsListMap);
+    public List<Details> getDetailsByName(String name) {
         List<Details> detailsList =detailsRepo.findByName(name);
-        detailsList.stream().forEach((p)->  detailsListMap.put(p, entryRepo.findByDetailsId(p.getId())));
-        return mobileDetails;
+        return detailsList;
     }
 
     @Override
-    public MobileDetails updateDetail(MobileDetails detail) {
-        Map<Details,List<Entry>> detailsListMap = new HashMap<>();
-        MobileDetails mobileDetails = new MobileDetails(detailsListMap);
-        detail.getDetailsListMap().keySet().parallelStream().forEach((p)-> {
-                   p= detailsRepo.save(p);
-detail.getDetailsListMap().put(p,entryRepo.findByDetailsId(p.getId()));
-                }
-        );
+    public Details updateDetail(Details detail) {
+
+                 detailsRepo.save(detail);
 
         return detail;
+    }
+
+    /**
+     * Utility method to get file name from HTTP header content-disposition
+     */
+    private String getFileName(Details details) {
+
+        return details.getMobile()+"_"+details.getname().substring(0,4);
     }
 }

@@ -1,3 +1,4 @@
+org\rssb\mda\rest\helper\EntryService.class
 org\rssb\mda\rest\helper\RequestValidator.class
 org\rssb\mda\config\WebSecurityConfig.class
 org\rssb\mda\controllers\HomeController.class
@@ -14,5 +15,6 @@ org\rssb\mda\exceptions\ValidationException.class
 org\rssb\mda\dao\DetailsDAO.class
 org\rssb\mda\entity\Entry.class
 org\rssb\mda\repository\EntryRepo.class
+org\rssb\mda\rest\helper\EntryServiceImpl.class
 org\rssb\mda\exceptions\MDAResponse.class
 org\rssb\mda\repository\DetailsRepo.class
