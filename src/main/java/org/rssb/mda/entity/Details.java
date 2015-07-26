@@ -39,7 +39,7 @@ public class Details {
     @Column(name = "center_id")
     private long centerId;
     @Column(name = "image")
-    @Lob
+
     private String image;
 
     public String getGender() {

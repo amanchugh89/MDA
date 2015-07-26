@@ -37,7 +37,7 @@ $(document).ready(function() {
         $.ajax({
             type: "POST",
             url: SEND_DETAILS,
-            data: $( "input, textarea" ).serialize(),
+            data: $( "input, textarea,select" ).serialize(),
             contentType: "application/x-www-form-urlencoded",
             success: function(data){ console.log(data);
             $("#response").append(data);
