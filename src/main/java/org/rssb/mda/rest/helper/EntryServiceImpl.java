@@ -36,6 +36,9 @@ public class EntryServiceImpl implements EntryService {
         if(detailsRepo.findOne(entry.getDetailsId()) == null){
             throw new ValidationException(MDAResponse.DETAILS_NOT_FOUND);
         }
+        if(entry.getTokenId() <=0){
+            throw new ValidationException(MDAResponse.TOKEN_NOT_VALID);
+        }
         entry.setSignIn(LocalDateTime.now());
         entry = entryRepo.save(entry);
         return entry;
@@ -66,5 +69,11 @@ public class EntryServiceImpl implements EntryService {
         detailsListMap.put(details,entryList);
         MobileDetails mobileDetails = new MobileDetails(detailsListMap);
         return mobileDetails;
+    }
+
+    @Override
+    public Entry getEntryByToken(Long tokenId){
+
+       return entryRepo.findByTokenId(tokenId);
     }
 }

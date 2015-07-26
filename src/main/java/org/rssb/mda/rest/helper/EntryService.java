@@ -16,4 +16,5 @@ public interface EntryService {
     MobileDetails history(Long entryId) throws ValidationException;
 
 
+    Entry getEntryByToken(Long tokenId);
 }

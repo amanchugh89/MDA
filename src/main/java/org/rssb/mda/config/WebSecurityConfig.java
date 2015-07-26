@@ -12,9 +12,10 @@ import org.springframework.security.config.annotation.web.servlet.configuration.
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+
         http
                 .authorizeRequests()
-                .antMatchers("/mda").permitAll().antMatchers("*//**").permitAll().antMatchers("/").permitAll();
+                .antMatchers("/**").permitAll();
 
         http.csrf().disable();
 
@@ -25,6 +26,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth
                 .inMemoryAuthentication()
                 .withUser("user").password("password").roles("USER");
+
     }
 
 }

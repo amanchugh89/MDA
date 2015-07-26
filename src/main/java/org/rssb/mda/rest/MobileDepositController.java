@@ -2,16 +2,23 @@ package org.rssb.mda.rest;
 
 import org.rssb.mda.entity.Details;
 import org.rssb.mda.entity.Entry;
+import org.rssb.mda.exceptions.MDAResponse;
 import org.rssb.mda.exceptions.ValidationException;
 import org.rssb.mda.rest.helper.DepositService;
 import org.rssb.mda.rest.helper.EntryService;
 import org.rssb.mda.rest.helper.RequestValidator;
 import org.rssb.mda.rest.types.MobileDetails;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.core.MediaType;
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 
 /**
@@ -27,27 +34,31 @@ public class MobileDepositController {
     @Autowired
     private EntryService entryService;
 
-    private void printTime(String sten){
-        System.out.println(System.currentTimeMillis()+ "-----Time for "+ sten);
+    @Value("${mypath}")
+    private String uploadDir ;
+
+
+    private void printTime(String sten) {
+        System.out.println(System.currentTimeMillis() + "-----Time for " + sten);
     }
 
     @RequestMapping(value = "/mobileDetails", method = RequestMethod.POST)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Details insert(@ModelAttribute Details mobileDetail) throws ValidationException{
-printTime("validat start");
-            RequestValidator.validateMobileRequest(mobileDetail);
+    public Details insert(@ModelAttribute Details mobileDetail) throws ValidationException {
+        printTime("validat start");
+        RequestValidator.validateMobileRequest(mobileDetail);
         printTime("valid end");
-        return  depositService.submitDetails(mobileDetail);
+        return depositService.submitDetails(mobileDetail);
     }
 
     @RequestMapping(value = "/mobileDetails/mobile={mobile}", method = RequestMethod.GET)
     public Details fetchDetailByMobile(@PathVariable Long mobile) throws ValidationException {
-       RequestValidator.validateMobile(mobile);
+        RequestValidator.validateMobile(mobile);
         return depositService.getDetailsByNo(mobile);
     }
 
     @RequestMapping(value = "/mobileDetails/{Id}", method = RequestMethod.GET)
-    public Details fetchDetailById(@PathVariable Long Id) throws ValidationException{
+    public Details fetchDetailById(@PathVariable Long Id) throws ValidationException {
         return depositService.getDetailsById(Id);
     }
 
@@ -80,4 +91,19 @@ printTime("validat start");
         return entryService.history(detailsId);
     }
 
+    @RequestMapping(value = "/mobileDetails/image={image}", method = RequestMethod.GET)
+    public String getImage(@PathVariable String image) throws ValidationException {
+
+        if (uploadDir != null) {
+            try {
+                byte[] encoded = Files.readAllBytes(Paths.get(uploadDir+ File.separator+image));
+                return new String(encoded, Charset.defaultCharset());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else
+            throw new ValidationException(MDAResponse.NO_RESPONSE);
+        return "";
+
+    }
 }

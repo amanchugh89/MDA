@@ -44,6 +44,10 @@ $(document).ready(function() {
                 $(':input','#detailsForm')
                     .not(':button, :submit, :reset, :hidden')
                     .val('');
+            },
+            error: function(data) {
+                $("#response").append(data);
+                $("#response").text(data);
             }
 
 

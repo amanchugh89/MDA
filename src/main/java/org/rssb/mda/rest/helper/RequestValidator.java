@@ -34,6 +34,7 @@ public class RequestValidator {
 
    public static void validateAddress(String address) throws ValidationException {
         if(address == null)
+        if(address == null   )
             throw new ValidationException(MDAResponse.ADDRESS_VALIDATION_ERROR);
 
     }
