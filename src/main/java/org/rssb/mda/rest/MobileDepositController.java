@@ -82,8 +82,8 @@ public class MobileDepositController {
 
     @RequestMapping(value = "/mobileDetails/signOut", method = RequestMethod.POST)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Entry signOut(@ModelAttribute Entry entry) throws ValidationException {
-        return entryService.signOut(entry);
+    public Entry signOut(@RequestParam Long detailsId,@RequestParam  int tokenId) throws ValidationException {
+        return entryService.signOut(detailsId,tokenId);
     }
 
     @RequestMapping(value = "/mobileDetails/history/{detailsId}", method = RequestMethod.POST)
@@ -106,4 +106,11 @@ public class MobileDepositController {
         return "";
 
     }
+
+    @RequestMapping(value = "/mobileDetails/pendingWithdrawal/{tokenId}", method = RequestMethod.POST)
+    public Details getPendingSignOut(@PathVariable Long tokenId) throws ValidationException {
+        Entry e =entryService.getEntryByToken(tokenId);
+        return e!= null ?depositService.getDetailsById(e.getDetailsId()) : null;
+    }
+
 }

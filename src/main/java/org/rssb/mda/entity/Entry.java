@@ -1,15 +1,19 @@
 package org.rssb.mda.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
  * Created by rs on 20/6/15.
  */
 @Entity
-@NamedQuery(name = "Entry.findPendingSignOut", query = "SELECT e FROM Entry e WHERE e.detailsId = ?1 AND e.signOut IS NULL AND e.signIn IS NOT NULL" )
+@NamedQueries({
+@NamedQuery(name = "Entry.findPendingSignOut", query = "SELECT e FROM Entry e WHERE e.detailsId = ?1 AND e.signOut IS NULL AND e.signIn IS NOT NULL" ),
+@NamedQuery(name = "Entry.findPendingSignOutByToken", query = "SELECT e FROM Entry e WHERE e.tokenId = ?1 AND e.signOut IS NULL AND e.signIn IS NOT NULL" )
+})
 @Table(name = "Entry")
 @Access(value = AccessType.FIELD)
 public class Entry {
@@ -25,13 +29,32 @@ public class Entry {
     private long tokenId;
 
     @Column(name="sign_in")
-    private LocalDateTime signIn ;
+    private Date signIn ;
 
     @Column(name="sign_out")
-    private LocalDateTime signOut;
+    private Date signOut;
+
+    public int getCounterId() {
+        return counterId;
+    }
+
+    public void setCounterId(int counterId) {
+        this.counterId = counterId;
+    }
 
     @Column(name = "counter_id")
     private int counterId;
+
+    @Column(name="count")
+    private int count;
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
 
     public long getuId()
     {
@@ -63,19 +86,19 @@ public class Entry {
         this.tokenId=tokenId;
     }
 
-    public LocalDateTime getSignIn() {
+    public Date getSignIn() {
         return signIn;
     }
 
-    public void setSignIn(LocalDateTime signIn) {
+    public void setSignIn(Date signIn) {
         this.signIn = signIn;
     }
 
-    public LocalDateTime getSignOut() {
+    public Date getSignOut() {
         return signOut;
     }
 
-    public void setSignOut(LocalDateTime signOut) {
+    public void setSignOut(Date signOut) {
         this.signOut = signOut;
     }
 }

@@ -16,4 +16,6 @@ List<Entry> findByDetailsId(long detailsId);
 
    Entry findByTokenId(long tokenId);
 
+   Entry findPendingSignOutByToken(long tokenId);
+
 }

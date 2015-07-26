@@ -11,10 +11,11 @@ public interface EntryService {
 
     Entry signIn(Entry entry) throws ValidationException;
 
-    Entry signOut(Entry entry) throws ValidationException;
 
     MobileDetails history(Long entryId) throws ValidationException;
 
 
     Entry getEntryByToken(Long tokenId);
+
+    Entry signOut(long detailsId, int tokenId) throws ValidationException;
 }

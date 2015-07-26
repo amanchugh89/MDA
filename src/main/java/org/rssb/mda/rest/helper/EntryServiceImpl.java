@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,23 +40,23 @@ public class EntryServiceImpl implements EntryService {
         if(entry.getTokenId() <=0){
             throw new ValidationException(MDAResponse.TOKEN_NOT_VALID);
         }
-        entry.setSignIn(LocalDateTime.now());
+        entry.setSignIn(new Date());
         entry = entryRepo.save(entry);
         return entry;
     }
 
     @Override
-    public Entry signOut(Entry entry) throws ValidationException {
-        Entry pendingSignOut = entryRepo.findPendingSignOut(entry.getDetailsId());
+    public Entry signOut(long detailsId,int tokenId) throws ValidationException {
+        Entry pendingSignOut = entryRepo.findPendingSignOut(detailsId);
         if (pendingSignOut == null) {
             throw new ValidationException(MDAResponse.NO_PENDING_SIGN_OUT);
         }
-        if(detailsRepo.findOne(entry.getDetailsId()) == null){
+        if(detailsRepo.findOne(detailsId) == null){
             throw new ValidationException(MDAResponse.DETAILS_NOT_FOUND);
         }
-        entry.setSignOut(LocalDateTime.now());
-        entry = entryRepo.save(entry);
-        return entry;
+        pendingSignOut.setSignOut(new Date());
+        pendingSignOut = entryRepo.save(pendingSignOut);
+        return pendingSignOut;
     }
 
     @Override
@@ -74,6 +75,6 @@ public class EntryServiceImpl implements EntryService {
     @Override
     public Entry getEntryByToken(Long tokenId){
 
-       return entryRepo.findByTokenId(tokenId);
+       return entryRepo.findPendingSignOutByToken(tokenId);
     }
 }

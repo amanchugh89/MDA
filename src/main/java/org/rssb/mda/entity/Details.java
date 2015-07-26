@@ -39,7 +39,6 @@ public class Details {
     @Column(name = "center_id")
     private long centerId;
     @Column(name = "image")
-
     private String image;
 
     public String getGender() {
