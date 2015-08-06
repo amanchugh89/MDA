@@ -1,0 +1,8 @@
+ul#mobile-reg {width: 75%;}
+.user-photo {max-width: 250px; width: 20%; margin: 75px 0;}
+.user-photo input{  width: 100%;}
+#mobile-reg .mob-reg-wrap{border: 1px solid #6389C6; border-radius: 0 0 5px 5px; padding: 10px;}
+#mobile-reg .mob-reg-wrap ul{border: none;}
+.operating-btn-wrap ul{border: none !important;}
+.ui-helper-hidden-accessible{display: none !important;}
+.validation-error input, .validation-error textarea{border: 1px solid #dd4b39 !important;}

@@ -8,10 +8,18 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 //@EnableWebMvc
 public class WebMvcConfig extends WebMvcConfigurerAdapter{
 
+
+
+
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/mda").setViewName("mda");
+        registry.addViewController("/mda/deposit").setViewName("mobileDeposit");
+        registry.addViewController("/mda/withdraw").setViewName("mobileWithdrawal");
+        registry.addViewController("/mda/register").setViewName("mobileRegistration");
+
     }
+
+
 
 
 }

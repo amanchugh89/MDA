@@ -10,7 +10,6 @@ import org.rssb.mda.rest.types.MobileDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -60,6 +59,13 @@ public class EntryServiceImpl implements EntryService {
     }
 
     @Override
+    public Entry getPendingEntryForUser(long detailsId) {
+
+
+        return entryRepo.findPendingSignOut(detailsId);
+    }
+
+    @Override
     public MobileDetails history(Long detailsId) throws ValidationException {
         Details details = detailsRepo.findOne(detailsId);
         if(details == null){
@@ -68,7 +74,7 @@ public class EntryServiceImpl implements EntryService {
         List<Entry> entryList = entryRepo.findByDetailsId(detailsId);
         Map<Details,List<Entry>> detailsListMap= new HashMap<>();
         detailsListMap.put(details,entryList);
-        MobileDetails mobileDetails = new MobileDetails(detailsListMap);
+        MobileDetails mobileDetails = new MobileDetails(details,entryList);
         return mobileDetails;
     }
 

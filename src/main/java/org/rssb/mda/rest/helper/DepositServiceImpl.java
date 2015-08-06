@@ -7,6 +7,7 @@ import org.rssb.mda.repository.DetailsRepo;
 import org.rssb.mda.repository.EntryRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedWriter;
@@ -32,35 +33,34 @@ public class DepositServiceImpl implements DepositService {
     @Value("${mypath}")
     private String uploadDir ;
 
-
-    private void printTime(String sten){
-        System.out.println(System.currentTimeMillis()+ "-----Time for "+ sten);
-    }
-
     @Override
     public Details submitDetails(Details mobileDetails) throws ValidationException {
-       // String uploadFilePath = System.getProperty("uploadDir");
         if (uploadDir != null) {
             File fileSaveDir = new File(uploadDir);
             if (!fileSaveDir.exists()) {
                 fileSaveDir.mkdirs();
             }
-            System.out.println("Upload File Directory=" + fileSaveDir.getAbsolutePath());
             String   fileName = fileSaveDir.getAbsoluteFile()+ File.separator + getFileName(mobileDetails);
             try {
-                printTime("imaage write");
                 FileWriter fw = new FileWriter(fileName);
                 BufferedWriter bw = new BufferedWriter(fw);
                 bw.write(mobileDetails.getImage());
                 bw.close();
-printTime("image write end");
+                mobileDetails.setImage(fileName);
+                detailsRepo.save(mobileDetails);
             } catch (IOException e) {
                 e.printStackTrace();
+                throw new ValidationException(MDAResponse.ERROR_SAVING_IMAGE);
+
             }
-printTime("db store");
-            mobileDetails.setImage(fileName);
-            detailsRepo.save(mobileDetails);
-            printTime("Db store ebnd");
+            catch(DataIntegrityViolationException e){
+                e.printStackTrace();
+                throw new ValidationException(MDAResponse.INTEGRITY_VIOLATION_DUP_KEY);
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
+
         }
         else
         throw new ValidationException(MDAResponse.NO_RESPONSE);
@@ -69,7 +69,7 @@ printTime("db store");
 
     @Override
     public Details getDetailsByNo(Long mobile) {
-        Details details = detailsRepo.findByMobile(mobile);
+        Details details = detailsRepo.findByMobileNo(mobile);
         return details;
     }
 
@@ -93,8 +93,16 @@ printTime("db store");
 
     @Override
     public Details updateDetail(Details detail) {
-
-                 detailsRepo.save(detail);
+    Details d =detailsRepo.findOne(detail.getId());
+        d.setAddress(detail.getAddress());
+        d.setAlternateNumber(detail.getalternateNumber());
+        d.setFathersName(detail.getFathersName());
+        d.setGender(detail.getGender());
+        d.setImage(detail.getImage());
+        d.setMobileNo(detail.getMobileNo());
+        d.setMothersName(detail.getMothersName());
+        d.setName(detail.getname());
+        detailsRepo.save(d);
 
         return detail;
     }
@@ -104,6 +112,6 @@ printTime("db store");
      */
     private String getFileName(Details details) {
 
-        return details.getMobile()+"_"+details.getname().substring(0,4);
+        return details.getMobileNo()+"_"+details.getname().substring(0,4);
     }
 }

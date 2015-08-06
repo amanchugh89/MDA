@@ -12,11 +12,14 @@ public class RequestValidator {
 
     public static void validateMobileRequest(Details details) throws ValidationException{
 
-        validateMobile(details.getMobile());
-        validateAddress(details.getAddress());
+        validateMobile(details.getMobileNo());
+      //  validateAddress(details.getAddress());
         validateGender(details.getGender());
         validateMobile(details.getalternateNumber());
         validateName(details.getname());
+        if(details.getMobileNo() == details.getalternateNumber()){
+            throw new ValidationException(MDAResponse.MOBLE_AND_ALT_SAME);
+        }
     }
 
 
@@ -27,14 +30,14 @@ public class RequestValidator {
     }
 
    public static void validateName(String name) throws ValidationException {
-        if(name == null || !name.matches("^[\\p{L} .'-]+$")  )
+        if(name != null || !name.matches("^[\\p{L} .'-]+$")  )
             throw new ValidationException(MDAResponse.NAME_VALIDATION_ERROR);
 
     }
 
    public static void validateAddress(String address) throws ValidationException {
-        if(address == null)
-        if(address == null   )
+
+        if(address != null   )
             throw new ValidationException(MDAResponse.ADDRESS_VALIDATION_ERROR);
 
     }

@@ -11,8 +11,14 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
+        String profile =System.getProperty("spring.profiles.active");
+        if(profile == null){
+            profile="dev";
+        }
 
-        new SpringApplicationBuilder(Application.class).profiles(System.getProperty("spring.profiles.active")).run(args);
+
+       new SpringApplicationBuilder(Application.class).profiles(profile).run(args);
+
 
 
     }

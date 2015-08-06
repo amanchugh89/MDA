@@ -3,9 +3,8 @@ package org.rssb.mda.rest.types;
 import org.rssb.mda.entity.Details;
 import org.rssb.mda.entity.Entry;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by rs on 20/6/15.
@@ -14,24 +13,40 @@ import java.util.Map;
 
 public class MobileDetails {
 
-Map<Details,List<Entry>> detailsListMap = new HashMap<Details,List<Entry>>();
 
-    public MobileDetails(Map<Details, List<Entry>> detailsListMap) {
-        this.detailsListMap = detailsListMap;
+    private Details details;
+private List<Entry> entry = new ArrayList<Entry>();
+
+    public MobileDetails(Entry e, Details d) {
+        this.entry .add(e);
+        this.details=d;
     }
 
-    public Map<Details, List<Entry>> getDetailsListMap() {
-        return detailsListMap;
+    public MobileDetails(Details details, List<Entry> entryList) {
+        this.details=details;
+        this.entry=entryList;
     }
 
-    public void setDetailsListMap(Map<Details, List<Entry>> detailsListMap) {
-        this.detailsListMap = detailsListMap;
+    public Details getDetails() {
+        return details;
+    }
+
+    public void setDetails(Details details) {
+        this.details = details;
+    }
+
+    public List<Entry> getEntry() {
+        return entry;
+    }
+
+    public void setEntry(Entry entry) {
+        this.entry = (List<Entry>) entry;
     }
 
     @Override
     public String toString() {
         return "MobileDetails{" +
-                "detailsListMap=" + detailsListMap +
+                "detailsListMap=" + details +
                 '}';
     }
 }

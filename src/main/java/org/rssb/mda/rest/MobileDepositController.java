@@ -38,16 +38,17 @@ public class MobileDepositController {
     private String uploadDir ;
 
 
-    private void printTime(String sten) {
-        System.out.println(System.currentTimeMillis() + "-----Time for " + sten);
+    @RequestMapping(value = "/mobileDetails", method = RequestMethod.POST)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Details insert(@RequestBody Details mobileDetail) throws ValidationException {
+        RequestValidator.validateMobileRequest(mobileDetail);
+        return depositService.submitDetails(mobileDetail);
     }
 
-    @RequestMapping(value = "/mobileDetails", method = RequestMethod.POST)
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Details insert(@ModelAttribute Details mobileDetail) throws ValidationException {
-        printTime("validat start");
+    @RequestMapping(value = "/mobileDetails/update", method = RequestMethod.POST)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Details update(@RequestBody Details mobileDetail) throws ValidationException {
         RequestValidator.validateMobileRequest(mobileDetail);
-        printTime("valid end");
         return depositService.submitDetails(mobileDetail);
     }
 
@@ -75,15 +76,15 @@ public class MobileDepositController {
     }
 
     @RequestMapping(value = "/mobileDetails/signIn", method = RequestMethod.POST)
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Entry signIn(@ModelAttribute Entry entry) throws ValidationException {
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Entry signIn(@RequestBody Entry entry) throws ValidationException {
         return entryService.signIn(entry);
     }
 
     @RequestMapping(value = "/mobileDetails/signOut", method = RequestMethod.POST)
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Entry signOut(@RequestParam Long detailsId,@RequestParam  int tokenId) throws ValidationException {
-        return entryService.signOut(detailsId,tokenId);
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Entry signOut(@RequestBody Entry entry) throws ValidationException {
+        return entryService.signOut(entry.getDetailsId(),((Long)entry.getTokenId()).intValue());
     }
 
     @RequestMapping(value = "/mobileDetails/history/{detailsId}", method = RequestMethod.POST)
@@ -107,10 +108,35 @@ public class MobileDepositController {
 
     }
 
-    @RequestMapping(value = "/mobileDetails/pendingWithdrawal/{tokenId}", method = RequestMethod.POST)
-    public Details getPendingSignOut(@PathVariable Long tokenId) throws ValidationException {
+    @RequestMapping(value = "/mobileDetails/pendingWithdrawal", method = RequestMethod.POST)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public MobileDetails getPendingSignOut(@RequestBody Long tokenId) throws ValidationException {
         Entry e =entryService.getEntryByToken(tokenId);
-        return e!= null ?depositService.getDetailsById(e.getDetailsId()) : null;
+        if ( e!= null)
+        {    Details d=  depositService.getDetailsById(e.getDetailsId());
+       return new MobileDetails(e,d);}
+        else
+            throw new ValidationException(MDAResponse.NO_PENDING_SIGN_OUT);
+
+
+    }
+
+    @RequestMapping(value = "/mobileDetails/pendingWithdrawalForMobile", method = RequestMethod.POST)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public MobileDetails getPendingSignOutByMobileNo(@RequestBody Long mobileNo) throws ValidationException {
+
+          Details d=  depositService.getDetailsByNo(mobileNo);
+        Entry e =null;
+        if (d!=null) {
+       e = entryService.getPendingEntryForUser(d.getId());
+        }
+
+          if( d==null || e == null){
+              throw new ValidationException(MDAResponse.NO_PENDING_SIGN_OUT);
+          }
+       return new MobileDetails(e,d);
+
+
     }
 
 }

@@ -22,6 +22,11 @@ public class Details {
     @Column(name = "city")
     private String city;
 
+
+
+    @Column(name = "pincode")
+    private int pincode;
+
     @Column(name = "address")
     private String address;
 
@@ -32,32 +37,28 @@ public class Details {
     private String mothersName;
     @Column(name = "gender")
     private String gender;
-    @Column(name = "mobile")
-    private long mobile;
+    @Column(name = "mobileNo")
+    private long mobileNo;
     @Column(name = "alternate_number")
     private long alternateNumber;
     @Column(name = "center_id")
     private long centerId;
     @Column(name = "image")
     private String image;
+    @Column(name = "age")
+    private int age;
 
-    public String getGender() {
-        return gender;
-    }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
 
     public void Details() {
     }
 
 
-    public void Details(String name, String address, long mobile, long alternateNumber,
+    public void Details(String name, String address, long mobileNo, long alternateNumber,
                         String city, String mothersName, String fathersName, String gender) {
         this.name = name;
         this.address = address;
-        this.mobile = mobile;
+        this.mobileNo = mobileNo;
         this.alternateNumber = alternateNumber;
         this.city = city;
         this.mothersName = mothersName;
@@ -102,12 +103,12 @@ public class Details {
         this.fathersName = fathersName;
     }
 
-    public long getMobile() {
-        return mobile;
+    public long getMobileNo() {
+        return mobileNo;
     }
 
-    public void setMobile(Long mobile) {
-        this.mobile = mobile;
+    public void setMobileNo(Long mobileNo) {
+        this.mobileNo = mobileNo;
     }
 
     public long getalternateNumber() {
@@ -116,6 +117,30 @@ public class Details {
 
     public void setAlternateNumber(Long alternateNumber) {
         this.alternateNumber = alternateNumber;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getPincode() {
+        return pincode;
+    }
+
+    public void setPincode(int pincode) {
+        this.pincode = pincode;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     @Override
@@ -128,7 +153,7 @@ public class Details {
                 ", fathersName='" + fathersName + '\'' +
                 ", mothersName='" + mothersName + '\'' +
                 ", gender='" + gender + '\'' +
-                ", mobile=" + mobile +
+                ", mobile=" + mobileNo +
                 ", alternateNumber=" + alternateNumber +
                 ", centerId=" + centerId +
                 '}';

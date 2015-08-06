@@ -18,4 +18,6 @@ public interface EntryService {
     Entry getEntryByToken(Long tokenId);
 
     Entry signOut(long detailsId, int tokenId) throws ValidationException;
+
+    Entry getPendingEntryForUser(long detailsId) ;
 }

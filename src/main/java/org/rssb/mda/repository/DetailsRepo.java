@@ -11,7 +11,7 @@ import java.util.List;
 public interface DetailsRepo extends CrudRepository<Details, Long> {
 
 
-    Details findByMobile(Long mobile);
+    Details findByMobileNo(Long mobileNo);
     List<Details> findByName(String name);
 
     List<Details> findByAlternateNumber(Long alternateNumber);

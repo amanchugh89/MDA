@@ -1,0 +1,375 @@
+﻿/**
+ * ==============================================================================
+ * @Author 	: Jay Tanwar (8800400534, radhasoami.jay@gmail.com)
+ * @Desc	: Media Queries of Responsive 
+ *				>> Page Structure, 
+ *				>> Page styles and 
+ *				>> other Plugins styles.
+ * ==============================================================================
+**/
+
+@media only screen and (min-width: 1281px){
+	
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px){
+	/* <--- Slips Status Page Styles ---> */
+	#slips-status .detail{font-size: 0.875em;}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+/*	"Plugins"
+	=========
+	
+	All Plugins that are used, their styles are to be coded in this section.
+*/
+
+/* --- Custom Form ---  */
+	fieldset.resp-form ul.form-fields-wrap > li{height: auto;}
+	fieldset.resp-form ul.form-fields-wrap > li label, fieldset.resp-form.col-3 ul.form-fields-wrap > li .label{display: block; width: 100%; margin: 0; padding-top: 0;}
+	fieldset.resp-form ul.form-fields-wrap > li input, fieldset.resp-form.col-3 ul.form-fields-wrap > li select, fieldset.resp-form.col-3 ul.form-fields-wrap > li .detail, fieldset.resp-form.col-3 ul.form-fields-wrap > li .radio-group-wrap{display: block; width: 98%; margin: 0;}
+	fieldset.resp-form ul.form-fields-wrap > li .detail{height: 16px;}
+	fieldset.resp-form .radio-group-wrap label{display: inline-block !important; padding-top: 5px !important; padding-bottom: 0;}
+	fieldset.resp-form .radio-group-wrap input[type="radio"]{width: 5%; display: inline-block !important;}
+	fieldset.resp-form .custom-checkbox-container{padding: 2px 1%;}
+	fieldset.resp-form .custom-checkbox-container.one .custom-checkbox-wrap{width: 94%; height: 20px; padding: 8px 1%; margin: 7px 0;}
+	fieldset.resp-form .custom-checkbox-container.two .custom-checkbox-wrap{width: 94%; height: 15px;}
+	fieldset.resp-form .custom-checkbox-container .custom-checkbox-wrap label{width: 80%; display: inline-block; padding-bottom: 5px; vertical-align: top;}
+/* ------------ END -------------- */
+
+/*	"Pages Styles"
+	==============
+	Styles of all the responsive page are to be coded in this section.
+*/
+/* 	<--- Slips Status Page Styles --->	*/
+	#slips-status .sewadar-ssno-detail .sewadar-details-wrap:first-child{width: 80%;}
+	#slips-status .sewadar-details-wrap.sewadar-img{width: 35%; max-width: 170px;}
+	#slips-status .imp-details {width: 65%;}
+	#slips-status .sewadar-ssno-detail .detail-label, #slips-status .sewadar-ssno-detail .detail{font-size: 0.82em; width: 49%;}
+	#slips-status .sewadar-details-wrap.attendance{position: absolute; right: 190px; top: 160px; width: 69%;}
+	#slips-status .sewadar-details-wrap.attendance li:last-child {padding-right: 0;}
+	#slips-status .sewadar-details-wrap.attendance .heading{width: 20%; text-align: left; margin-right: 2%;}
+	#slips-status .sewadar-details-wrap.attendance .sewadar-details{height: 70px;}
+	#slips-status .sewadar-misc-details .sewadar-details{height: 25px;}
+	
+/*	<--- Sewadar Search Page Styles --->	*/
+	#slip-search li.custom-checkbox-container .custom-checkbox-wrap{width: 94%;}
+	#slip-search li.custom-checkbox-container .custom-checkbox-wrap:first-child{margin: 0;}
+	
+	.custom-label input {width: 10% !important; margin: 0 1% !important;}
+	.custom-label label {width: 85% !important;}
+	.custom-checkbox-wrap label{margin: 0 1.5% !important;}
+	
+/*	<---Accomodation Page Style --->	*/
+	#accomodation-reg div.children-input label{width: 28%; vertical-align: top;}
+	#accomodation-reg div.children-input input{vertical-align: top;}
+	#accomodation-reg fieldset.acc-details li > label{width: 40%;}
+	#accomodation-reg fieldset.acc-details li > select{width: 55%;}
+/* ------------ END -------------- */
+}
+
+@media only screen and (max-width: 767px){
+/* 	"Basic Page Structure"
+	======================
+	General Responsive Page Structure related styles are to be coded in this section.
+*/
+	
+	/* General Styles */
+	.hide-in-mobile{display: none !important;}
+	.hide-in-desk{display: block !important;}
+	.page-container{padding: 20px 1% 5px;}
+	
+    /* Header styles */
+	body{right: 0;}
+	body.mobile-fixed{position: fixed; left: 0; right: 0;}
+	body.mobile-display{right: 220px; left: -220px;}
+	.mobile-menu{display: block; position: absolute; top: 0; right: 0; width: 45px; height: 60px; cursor: pointer;}
+	.mobile-menu .menu-icon{display: block; position: absolute; right: 10px; top: 29px; height: 4px; width: 25px; background: #000; text-align: center;
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-o-transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		transition: all 0.5s;
+	}
+	.mobile-menu:before{content: " "; position: absolute; right: 10px; top: 20px; background: #000; width: 25px; height: 4px;
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-o-transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		transition: all 0.5s;
+	}
+	.mobile-menu:after{content: " "; position: absolute; right: 10px; top: 38px; background: #000; width: 25px; height: 4px;	
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-o-transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		transition: all 0.5s;
+	}
+	
+	.mobile-menu:active{top: 0;}
+	
+	.mobile-display .mobile-menu .menu-icon{
+		opacity: 0;
+		width: 0;
+	}
+	.mobile-display .mobile-menu:before{
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		top: 29px;		
+	}
+	.mobile-display .mobile-menu:after{
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		top: 29px;
+	}
+	
+	body, div.bottom-section{
+		-webkit-transition: right 0.5s ease-out, left 0.5s ease-out;
+		-moz-transition: right 0.5s ease-out, left 0.5s ease-out;
+		-o-transition: right 0.5s ease-out, left 0.5s ease-out;
+		-ms-transition: right 0.5s ease-out, left 0.5s ease-out;
+		transition: right 0.5s ease-out, left 0.5s ease-out;
+	}
+	
+	div.top-section{height: 60px; text-align: center;}
+	div.top-section p {width: 80%; left: 10%;}
+	div.mobile-mid-section{display: block; height: 60px; width: 100%;}
+	div.mobile-mid-section .bottom-blue{background: #ccd2e2; width: 100%; height: 31px; position: absolute; bottom: 0;}
+	div.mobile-mid-section .BIMS-heading{background: #e5ecf9; height: 47px; position: absolute; top: 2px; width: 100%; color: #444; font: bold 35px Arial; letter-spacing: 5px; padding-top: 9px; text-align: center;}
+	div.bottom-section{position: fixed; right: -220px; width: 220px; height: 100%; top: 0; border-left: 1px solid #aaa; background: #eee;}
+	div.bottom-section.open-menu{right: 0;}
+	div.account-links{position: relative; padding: 0;}
+	div.account-links span.divider{display: none !important;}
+	a.main-menu-link, div.account-links a{display: inline-block; vertical-align: top; width: 100%; margin: 0; font: bold 16px/16px Arial; 
+		text-decoration: none; padding: 10px; border-bottom: 1px solid #ddd;}
+	a.main-menu-link:hover, div.account-links a:hover{background: #ddd; color: #fff;}
+	
+	/* Footer styles */
+	p.rssb-legal{margin: 10px 0;}
+/*---------------END-------------- END of Basic Page Structure ----------------END--------------*/
+
+
+/*	"Plugins"
+	=========
+	All Plugins that are used, their styles are to be coded in this section.
+*/
+/*
+	--- Custom Form --- 
+	Used in all the responsive pages that include any form.
+*/
+	.page-container fieldset.resp-form{width: 100%; position: relative;}
+
+/*---------------END-------------- END of Plugins ----------------END--------------*/
+
+/*	"Pages Styles"
+	==============
+	Styles of all the responsive page are to be coded in this section.
+*/
+/*	<--- Main Menu Page Styles --->	*/
+	body{position: relative;}
+	#mainMenu .menu{display:block; max-width: 100%; height: auto; margin-top: -10px;}
+	#mainMenu .hideContent{max-height: 0px; overflow: hidden;}
+	#mainMenu .menuWrap{width: 95%;}
+	
+/*	<--- FAQs Page --->	*/
+	#faq .page-container h1{font-size: 20px;}
+	#faq .search-faq{position: relative; top: 0; right: 0; Padding-left: 1%; margin-bottom: 25px;}
+	#faq .search-faq label {width: 50%;}
+	#faq div.search-inputs {position: relative; width: 50%; display: block;}
+	#faq .search-faq input[type=text]{width: 50%; display: block;}
+	#faq .search-faq #category-btn{float: right; margin-top: 15px;}
+	#faq .category-nav{position: absolute; right: 2%; z-index: 999; background: #ddd; width: 192px; padding: 2%; border-radius: 5px; display: none;
+		-webkit-transition: all ease-in-out 0.5s;
+		-moz-transition: all ease-in-out 0.5s;
+		-o-transition: all ease-in-out 0.5s;
+		-ms-transition: all ease-in-out 0.5s;
+		transition: all ease-in-out 0.5s;		
+	}
+	#faq .search-message {width: 100%;}
+	#faq .category-nav.cat-hide{opacity: 0; top: 125px;}
+	#faq .category-nav.cat-show{opacity: 1; top: 55px;}
+	#faq .category-nav:before{content:""; width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 15px solid #ddd; position: absolute; top: -15px; right: 20px;}
+	#faq .category-nav ul{margin: 0 0 15px;}
+	#faq .faq-wrap {width: 100%; margin: 0%;}
+	
+/*	<--- SMS Plus Slips Status Styles --->	*/
+	#slips-status .sewadar-ssno-detail{width: 100%; margin: 0;}
+	#slips-status .attendance{text-align: center;}
+	#slips-status .sewadar-details-wrap .address .address-wrap:last-child{padding: 10px 1%; background: #E5ECF9; width: 100%; margin-left: -1%;}
+	#slip-search ul.sewadar-details-wrap.action-buttons li{width: 30%; height: 40px;}
+	#slip-search form ul.sewadar-details-wrap.action-buttons li input{width: 98%;}
+
+/*	<--- Bulk Operations Page Styles --->	*/
+	.custom-label input {width: 10% !important; margin: 0 1% !important;}
+	.custom-label label {width: 85% !important;}
+}
+
+@media only screen and (min-width: 570px) and (max-width: 767px){
+/*
+	"Plugins"
+	=========
+	All Plugins that are used, their styles are to be coded in this section.
+*/
+
+/*
+	--- Custom Form --- 
+	Used in all the responsive pages that include any form.
+*/
+	fieldset.resp-form.col-3 ul.form-fields-wrap > li{width: 47.5%;}
+	fieldset.resp-form .custom-checkbox-container .custom-checkbox-wrap label{width: 77%;}
+	fieldset.resp-form .custom-checkbox-container .custom-checkbox-wrap input[type=checkbox]{vertical-align: top;}
+	fieldset.resp-form ul.form-fields-wrap > li input, 
+	fieldset.resp-form ul.form-fields-wrap > li select, 
+	fieldset.resp-form ul.form-fields-wrap > li textarea, 
+	fieldset.resp-form ul.form-fields-wrap > li .detail, 
+	fieldset.resp-form ul.form-fields-wrap > li .radio-group-wrap{vertical-align: top;}
+
+/*
+	"Pages Styles"
+	==============
+	Styles of all the responsive page are to be coded in this section.
+*/
+/* 
+	<--- Slips Status Page Styles --->
+*/
+	#slips-status .sewadar-details-wrap.sewadar-img{position: absolute; top: 20px; right: 10px;}
+	#slips-status .sewadar-img img {height: 155px; width: 120px;}
+	#slips-status .form-fields-wrap .address{width: 100%;}
+	#slips-status .remarks-wrap{width: 98%;}	
+	#slips-status .imp-details{width: 100%; margin-top: 80px;}
+	#slips-status .sewadar-ssno-detail .sewadar-details-wrap:first-child{width: 100%; max-width: none; text-align: left; background: #f2f2f2;}
+	#slips-status .sewadar-ssno-detail .sewadar-details-wrap:first-child li{display: inline-block; vertical-align: top; width: 30%; border: none !important; margin-left: 1%;}
+	#slips-status .sewadar-ssno-detail .sewadar-details-wrap:first-child li:first-child{margin-left: 0;}
+	#slips-status .sewadar-ssno-detail .detail-label{width: 100%; margin-right: 5%;}
+	#slips-status .sewadar-ssno-detail .detail{width: 100%;}
+
+/* 
+	<--- Sewadar Search Page Styles --->
+*/
+	
+
+	
+/*
+	<--- Accomodation Registration Page --->
+*/
+	#accomodation-reg fieldset.acc-details ul li{text-align: left;}
+	#accomodation-reg div.children-input{text-align: left;}
+	#accomodation-reg div.children-input label{width: 26%; text-align: right;}
+}
+
+@media only screen and (max-width: 569px){
+	
+/*
+	"Plugins"
+	=========
+	All Plugins that are used, their styles are to be coded in this section.
+*/
+
+/*
+	--- Tab Accordion Style --- 
+	Used in Slips Status Page.
+*/
+	.mobile-accordion-link{display: block; background: #ccc; margin: 10px 0 0 0; padding: 5px; text-decoration: none; position: relative;}
+	.mobile-accordion-link span{display: block; position: absolute; right: 20px; top: 5px;
+		-webkit-transform: rotateZ(0deg);
+		-moz-transform: rotateZ(0deg);
+		-o-transform: rotateZ(0deg);
+		-ms-transform: rotateZ(0deg);
+		transition: -webkit-transform 0.5s ease;
+	}
+	.mobile-accordion-link.active span{-webkit-transform: rotateZ(90deg);}
+	.mobile-accordion-tab{position: relative; background: #fefefe; max-height: 0; overflow: hidden;
+		transition: max-height 0.5s ease-out;
+	}
+	.mobile-accordion-tab.active-tab{max-height: 1200px;}
+	
+	.tab-nav-bar{display: none;}
+	.tab-wrap{padding: 0; border-radius: 0; background: none;}
+	.remarks-wrap{width: 99%;}
+	.tab-elem.hide-tab{opacity: 1 !important;}
+	td.history-tab {display: none;}
+	
+/*
+	--- Custom Form --- 
+	Used in all the responsive pages that include any form.
+*/
+	fieldset.resp-form.col-3 ul.form-fields-wrap > li{width: 98%;}
+
+/*
+	--- Responsive Table --- 
+	Used in Slips Search Page.
+*/
+	.table-result-wrap ul.table-options-wrap{padding-top: 30px; position: relative;}
+	.table-result-wrap ul.table-options-wrap li.table-options.text{position: absolute; top: 0; width: 98%; left: 0; border-bottom: 1px solid #777;}
+	.table-result-wrap ul.table-options-wrap li.table-options{width: 47%;}
+	.table-result-wrap ul.table-options-wrap li.table-options select, .table-result-wrap ul.table-options-wrap li.table-options input{width: 98%; margin:0 1%; padding:2px;}
+	.table-result-wrap ul.table-options-wrap li.table-options select{height: 26px;}
+	.table-result-wrap ul.table-options-wrap li.table-options label, .table-result-wrap ul.table-options-wrap li.table-options span{width: 98%; display: inline-block; font-weight: normal; padding-bottom: 1px;}
+
+/*
+	"Pages Styles"
+	==============
+	Styles of all the responsive page are to be coded in this section.
+*/
+/* 
+	<--- Slips Status Page Styles --->
+*/
+	#slips-status .get-sewadar-details { width: 100%; margin-top: 20px; text-align: center;}
+	#slips-status .get-sewadar-details input{width: 70%; height: 30px; font: 16px Arial;}
+	#slips-status .get-sewadar-details input[type=text]{ width: 80%; max-width: 100%; height: 25px;}
+	#slips-status .detail{vertical-align: baseline;}
+	#slips-status .sewadar-details-wrap.sewadar-img{position: absolute; left: 1%; width: 98%; max-width: 98%; text-align: center; top: 15px;}	
+	#slips-status .imp-details {width: 100%; margin-top: 220px;}	
+	#slips-status .sewadar-ssno-detail .sewadar-details-wrap:first-child{position: relative; float: none; width: 100%; max-width: 100%; text-align: left;}	
+	#slips-status .sewadar-ssno-detail .detail-label{width: 49%; text-align: left; max-width: 100%;}
+	#slips-status .sewadar-ssno-detail .detail{width: 49%; text-align: right; max-width: 100%;}	
+	#slips-status .attendance{background: #f2f2f2; padding-top: 30px; position: relative;}
+	#slips-status .attendance .heading{position: absolute; top: 5px; width: 95%; left: 0; margin-right: 0; text-align: center; height: 25px;}
+	#slips-status .attendance .heading p.detail-label{padding: 5px; text-align: left;}
+	#slips-status .attendance .sewadar-details{width: 10%;}	
+	#slips-status .attendance p.detail-label, #slips-status .attendance p.detail{text-align: center;}	
+	#slips-status .form-fields-wrap .address{width: 100%;}
+	#slips-status .remarks-wrap{width: 98%;}
+	#slips-status .search-history-table td {padding-left: 5px; font-weight: 100; font-size: 0.95em;}
+	
+/* 
+	<--- Sewadar Search Page Styles --->
+*/
+
+/*
+	<--- Accomodation Registration Page --->
+*/
+	#accomodation-reg h1{font-size: 1.4em;}
+	#accomodation-reg fieldset.search-id, #accomodation-reg fieldset.acc-details{width: 96%; height: auto; float: none; padding: 2%; margin-bottom: 10px; text-align: center; max-width: 100%;}
+	#accomodation-reg fieldset.male-details, #accomodation-reg fieldset.female-details{width: 93%; margin-left: 7%;}
+	#accomodation-reg fieldset legend {display: inline-block; position: absolute; left: -58px; top: 44%; 
+		-webkit-transform: rotateZ(270deg);
+		-moz-transform: rotateZ(270deg);
+		-o-transform: rotateZ(270deg);
+		-ms-transform: rotateZ(270deg);
+		transform: rotateZ(270deg);
+	}
+	#accomodation-reg fieldset.female-details legend {left: -70px;}
+	#accomodation-reg div.children-input{text-align: left;}
+	#accomodation-reg div.children-input label{text-align: right; width: 28%;}	
+	#accomodation-reg fieldset.seperator {width: 100%; margin: 5px 0; text-align: center;}
+	#accomodation-reg fieldset.seperator ul li {margin: 0 20px; display: inline-block; vertical-align: top;}
+	#accomodation-reg fieldset.seperator ul li input {display: inline-block; width: 33px; padding: 15px 0; height: 55px;
+		-webkit-transform: rotateZ(90deg);
+		-moz-transform: rotateZ(90deg);
+		-o-transform: rotateZ(90deg);
+		-ms-transform: rotateZ(90deg);
+		transform: rotateZ(90deg);
+	}
+	
+}
+
+@media only screen and (max-width: 319px){
+	
+}
