@@ -1,0 +1,123 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>Mobile Withdrawal</title>
+		<link rel="stylesheet" href="../Common/css/reusable.css"/>
+		<link rel="stylesheet" href="../Common/css/responsive.css"/>
+		<link rel="stylesheet" href="css/mobileDeposite.css" />
+	</head>
+	<body>
+		<header>
+			<div class="page-header">
+				<img class="rssb-logo fl" src="../Common/images/logo.gif" alt="RSSB Logo">
+				<div class="top-section">
+					<p class="BIMS-heading arial-black">Bhati Information Management System</p>
+					<div class="mobile-mid-section">
+						<div class="top-blue"></div>
+						<div class="bottom-blue"></div>
+						<div class="BIMS-heading">B.I.M.S</div>
+					</div>
+					<a class="mobile-menu"></a>
+				</div>
+				<div class="bottom-section">
+					<div class="menu-links fr">
+						<a href="../Common/WebPages/MainMenu.aspx" id="ctl00_Header1_mainMenu" class="main-menu-link">Main Menu</a>
+						<span class="divider">| </span>
+						<a href="../Common/WebPages/ChangePassword.aspx?" id="ctl00_Header1_hrefChangePassword" class="cLinks">Change Password</a>
+						<span class="divider">| </span>
+						<a id="ctl00_Header1_Logout" class="cLinks" href="../Common/WebPages/Login.aspx"><u>Logout</u></a>
+						<div class="account-links">
+							<a href="../../BIMS_DeptUserManual.pdf" target="_blank">BIMS User Manual</a>
+							<span class="divider">| </span>
+							<a href="http://172.21.0.196/support/" target="_blank">Facing Problem?</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>	
+		<div id="mobile-reg" class="section-wrap">
+            <div class="page-container">
+                <h1>Issue Mobile</h1>
+				<div class="quick-links">
+					<a href="mobileDeposit.html">Deposit Mobile</a>
+					<a href="mobileRegistration.html">Mobile Registration</a>
+				</div>
+                <fieldset id="token-details" class="fetch-data resp-form wrap dib">
+                    <legend>Fetch Data</legend>					
+					<ul class="form-fields-wrap col-1">
+						<li class = "dib validation-parent">
+							<label for="token-num">Token Number*: </label><input id="token-num" type = "text" required data-validation
+								data-error = '{"required" : "Please enter Token number."}'
+								data-bind="value: $root.token.tokenId" 
+							placeholder = "Token Number of mobile" />
+						</li>
+						<li class = "dib validation-parent">
+							<label for="mob-num">Mobile Number*: </label><input id="mob-num" type = "text" required
+								data-validation = '{"validmobile" : "true"}'
+								data-error = '{"required" : "Please enter mobile number", "validmobile" : "Please enter valid mobile number"}'
+								data-bind="value: $root.token.mobileNo" 
+							placeholder = "without 0 or +91" maxlength="10"/>
+						</li><li class="btn-wrap">
+							<input type="submit" value="Fetch Details" class="btn-blue fetch-icon blue sprite" data-bind="click: fetchData"/>
+						</li><li class="dib btn-wrap">
+							<input type="button" value="Discard Changes" class="btn-white" data-bind="click: resetFields">
+						</li>
+					</ul>
+				</fieldset><div class="user-photo dib">
+					<img id="userPhoto" src="images/userDefault.png" data-bind="attr: { 'src': $root.user.image }" />
+					<!-- <input type="file" name="userImage" id="userImage" class="user-image-input" required data-bind="value: $root.model.photo" /> -->
+				</div><fieldset class="deposit-data resp-form wrap dib">
+					<legend>Mobile Deposit Details</legend>	
+					<ul class="form-fields-wrap col-1">
+						<li class = "dib validation-parent">
+							<label for="name">Sangat's Name: </label><input id="name" type = "text" disabled data-bind="value: $root.mobile.name" />
+						</li><li class = "dib validation-parent">
+							<label for="quantity">Phones Quantity: </label><input id="quantity" type = "text" disabled data-bind="value: $root.mobile.count" />
+						</li><!-- <li class = "dib validation-parent">
+							<label for="counter">Deposit Counter: </label><input id="counter" type = "text"disabled data-bind="value: $root.mobile.depositeCounter" />
+						</li> --><li class = "dib validation-parent">
+							<label for="counter">Deposit Date/Time: </label><input id="depositTime" type = "text"disabled data-bind="value: $root.mobile.signIn" />
+						</li><li class="dib btn-wrap">
+							<input type="button" id="issueMobile" value="Return Mobile" class="btn-blue" disabled data-bind="click: issueMobile">
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset class="resp-form wrap">
+					<legend>Sangat's Details</legend>
+					<ul class="form-fields-wrap col-3">
+						<li class = "dib validation-parent">
+							<label for="unique-id">Unique ID: </label><input id="unique-id" type = "text" disabled data-bind="value: $root.user.id" />
+						</li><li class = "dib validation-parent">
+							<label for="mob-num">Mobile Number*: </label><input id="mob-num" type = "text" disabled data-bind="value: $root.user.mobileNo" />
+						</li><li class = "dib validation-parent">
+							<label for="name">Sangat's Name*: </label><input id="name" type = "text" disabled data-bind="value: $root.user.name" />
+						</li><li class = "dib validation-parent">
+							<label for="status">Gender*: </label><input id="gender" type = "text" disabled data-bind="value: $root.user.gender" />
+						</li><li class="dib validation-parent">
+							<label for="token-num">Alternate Contact No*.</label><input id="mobile-make" type = "text" disabled data-bind="value: $root.user.alternateNumber" />
+						</li><li class="dib validation-parent">
+							<label for="token-num">Father's / Husband's name*</label><input id="mob-brand" type = "text" disabled data-bind="value: $root.user.fatherName" />
+						</li><li class = "dib validation-parent">
+							<label for="status">Mother's Name*: </label><input id="status" type = "text" disabled data-bind="value: $root.user.motherName" />
+						</li><!-- <li class = "dib validation-parent">
+							<label for="counter">Time of Registration: </label><input id="counter" type = "text" data-bind="value: $root.user.regTime" disabled />
+						</li><li class = "dib validation-parent">
+							<label for="counter">Time of Last Update: </label><input id="counter" type = "text" data-bind="value: $root.user.updatedTime" disabled />
+						</li> -->
+					</ul>
+				</fieldset>
+			</div>
+		</div>
+		<footer>
+			<p> Copyright &copy; Radha Soami Satsang Beas</p>
+		</footer>
+		<script src="../Common/js/vendor/jquery.min.js"></script>
+		<script src="../Common/js/vendor/knockout.latest.min.js"></script>
+		<script src="../Common/js/vendor/knockout.mapping.js"></script>
+		<script src="../Common/js/vendor/jqueryUi.js"></script>
+		<script src="../Common/js/utilities.js"></script>
+		<script src="../Common/js/responsive.js"></script>	
+		<script src="../Common/js/autoComplete.js"></script>
+		<script src="js/issueMobile.js"></script>
+	</body>
+</html>

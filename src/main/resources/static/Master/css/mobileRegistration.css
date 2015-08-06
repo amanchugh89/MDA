@@ -1,0 +1,31 @@
+ul#mobile-reg {width: 75%;}
+.user-photo {max-width: 250px; width: 20%; margin: 0;}
+.user-photo input{  width: 100%;}
+.user-photo img{width: 200px; height: 200px;}
+#mobile-reg .mob-reg-wrap{border: 1px solid #6389C6; border-radius: 0 0 5px 5px; padding: 10px;}
+#mobile-reg .mob-reg-wrap ul{border: none;}
+.operating-btn-wrap ul{border: none !important;}
+.ui-helper-hidden-accessible{display: none !important;}
+.validation-error input, .validation-error textarea{border: 1px solid #dd4b39 !important;}
+
+.quick-links {position: absolute; right: 25px; top: 25px;}
+.quick-links a{text-decoration: none; background: #e5ecf9; padding: 10px; color: #002B64; border-radius: 5px;
+	-webkit-transition: background 0.2s ease-in-out;
+	-moz-transition: background 0.2s ease-in-out;
+	-o-transition: background 0.2s ease-in-out;
+	-ms-transition: background 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out;
+}
+.quick-links a:hover{background: #D1D8E5;}
+
+.deposite-mobile {position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 999; opacity: 1; 
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-moz-transition: opacity 0.2s ease-in-out;
+	-o-transition: opacity 0.2s ease-in-out;
+	-ms-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
+}
+.deposite-mobile h2{margin: 0; padding: 5px 2px; font: bold 25px Arial; color: #333; text-align: center; text-shadow: 1px 1px 5px #888;}
+.deposite-mobile .token-issue-wrap{border: none;width: 400px; background: #fff; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 5px;}
+.deposite-mobile .token-issue-wrap ul{border: none;}
+.deposite-mobile.remove{opacity: 0; z-index: -1 !important;}

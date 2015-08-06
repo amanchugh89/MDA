@@ -1,0 +1,16 @@
+.operating-btn-wrap{width: 98% !important;}
+.operating-btn-wrap ul{border: none !important; padding: 0 !important;}
+.ui-helper-hidden-accessible{display: none !important;}
+.fetch-data{width: 30%; margin-right: 5% !important;}
+.user-photo {width: 30%; margin: 70px 5% 0 0; text-align: center;}
+.deposit-data{width: 30%;}
+
+.quick-links {position: absolute; right: 25px; top: 25px;}
+.quick-links a{text-decoration: none; background: #e5ecf9; padding: 10px; color: #002B64; border-radius: 5px;
+	-webkit-transition: background 0.2s ease-in-out;
+	-moz-transition: background 0.2s ease-in-out;
+	-o-transition: background 0.2s ease-in-out;
+	-ms-transition: background 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out;
+}
+.quick-links a:hover{background: #D1D8E5;}

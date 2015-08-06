@@ -1,0 +1,45 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>Search Mobile</title>
+		<link rel="stylesheet" href="../Common/css/reusable.css"/>
+		<link rel="stylesheet" href="../Common/css/responsive.css"/>
+		<link rel="stylesheet" href="css/mobileWithdrawal.css" />
+	</head>
+	<body>
+		<div id="mobile-search" class="section-wrap">
+            <div class = "page-container">
+                <h1>Search Mobile</h1>
+                <fieldset class="resp-form wrap">
+                    <legend>Search Mobile</legend>					
+					<ul class="form-fields-wrap col-3">
+						<li class = "dib validation-parent">
+							<label for="mob-num">Mobile Number*: </label><input id="mob-num" type = "text" required
+								data-validation = '{"validmobile" : "true"}'
+								data-error = '{"required" : "Please enter mobile number", "validmobile" : "Please enter valid mobile number"}'
+								data-bind="value: $root.model.mobileNo" 
+							placeholder = "without 0 or +91" maxlength="10"/>
+						</li><li class = "dib validation-parent">
+							<label for="name">Sangat's Name*: </label><input id="name" type = "text" required
+								data-validation='{"regex": "^[a-zA-Z][a-zA-Z0-9]{3,50}$"}'
+								data-error='{"regex": "Please enter valid Name", "required": "Sangat Name is mandatory", "maxlength": "Name cannot be more than 50 characters"}' 
+								data-bind="value: $root.model.userName"
+							placeholder = "Enter complete name" />
+						</li><li class="btn-wrap">
+							<input type="submit" value="Fetch Details" class="btn-blue fetch-icon blue sprite" />
+						</li>
+					</ul>					
+				</fieldset>
+			</div>
+		</div>
+		
+		<script src="../Common/js/vendor/jquery.min.js"></script>
+		<script src="../Common/js/vendor/knockout.latest.min.js"></script>
+		<script src="../Common/js/vendor/knockout.mapping.js"></script>
+		<script src="../Common/js/vendor/jqueryUi.js"></script>
+		<script src="../Common/js/utilities.js"></script>
+		<script src="../Common/js/responsive.js"></script>	
+		<script src="../Common/js/autoComplete.js"></script>
+		<script src="js/mobileRegistration.js"></script>
+	</body>
+</html>

@@ -1,0 +1,183 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>Mobile Registration</title>
+		<link rel="stylesheet" href="../Common/css/reusable.css"/>
+		<link rel="stylesheet" href="../Common/css/responsive.css"/>
+		<link rel="stylesheet" href="css/mobileRegistration.css" />
+	</head>
+	<body>
+		<header>
+			<div class="page-header">
+				<img class="rssb-logo fl" src="../Common/images/logo.gif" alt="RSSB Logo">
+				<div class="top-section">
+					<p class="BIMS-heading arial-black">Bhati Information Management System</p>
+					<div class="mobile-mid-section">
+						<div class="top-blue"></div>
+						<div class="bottom-blue"></div>
+						<div class="BIMS-heading">B.I.M.S</div>
+					</div>
+					<a class="mobile-menu"></a>
+				</div>
+				<div class="bottom-section">
+					<div class="menu-links fr">
+						<a href="../Common/WebPages/MainMenu.aspx" id="ctl00_Header1_mainMenu" class="main-menu-link">Main Menu</a>
+						<span class="divider">| </span>
+						<a href="../Common/WebPages/ChangePassword.aspx?" id="ctl00_Header1_hrefChangePassword" class="cLinks">Change Password</a>
+						<span class="divider">| </span>
+						<a id="ctl00_Header1_Logout" class="cLinks" href="../Common/WebPages/Login.aspx"><u>Logout</u></a>
+						<div class="account-links">
+							<a href="../../BIMS_DeptUserManual.pdf" target="_blank">BIMS User Manual</a>
+							<span class="divider">| </span>
+							<a href="http://172.21.0.196/support/" target="_blank">Facing Problem?</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>	
+		<div id="mobile-reg" class="section-wrap">
+            <div class = "page-container">
+                <h1>Mobile Registration</h1>
+				<div class="quick-links">
+					<a href="mobileDeposit.html">Deposit Mobile</a>
+					<a href="mobileWithdrawal.html">Issue Mobile</a>
+				</div>
+                <fieldset class="resp-form wrap">
+                    <legend>Registration of mobile</legend>					
+					<div class="mob-reg-wrap">
+						<div class="user-photo dib validation-parent">
+							<img id="userPhoto" src="images/userDefault.png" data-bind="attr: { src: $root.model.image}" />
+							<input type="file" name="userImage" id="userImage" class="user-image-input" required data-validation
+									data-error = '{"required" : "Please add photo of the Sangat."}' data-bind="value: photo" />
+						</div>
+						<ul id="mobile-reg" class="form-fields-wrap col-2 dib">
+							<li class = "dib validation-parent">
+								<label for="mob-num">Mobile Number*: </label><input id="mob-num" type = "text" required
+									data-validation = '{"validmobile" : "true"}'
+									data-error = '{"required" : "Please enter mobile number", "validmobile" : "Please enter valid mobile number"}'
+									data-bind="value: $root.model.mobileNo" 
+								placeholder = "without 0 or +91" maxlength="10"/>
+							</li><li class = "dib validation-parent">
+								<label for="name">Sangat's Name*: </label><input id="name" type = "text" required
+									data-validation='{"regex": "^[a-zA-Z][a-zA-Z0-9]{3,50}$"}'
+									data-error='{"regex": "Please enter valid Name", "required": "Sangat Name is mandatory", "maxlength": "Name cannot be more than 50 characters"}' 
+									data-bind="value: $root.model.name"
+								placeholder = "Enter Sangat's name" />
+							</li><li class = "dib validation-parent">
+								<label for="status">Gender*: </label><select id="status" required data-validation
+									data-error = '{"required" : "Please enter gender of sangat."}'
+									data-bind="value: $root.model.gender">
+										<option value="">Please select</option>
+										<option value="M">Male</option>
+										<option value="F">Female</option>
+									</select>
+							</li><li class="dib validation-parent">
+								<label for="token-num">Alternate Contact No*.</label><input id="mobile-make" type = "text" required
+									data-validation = '{"validmobile" : "true"}'
+									data-error = '{"required" : "Please enter other contact number.", "validmobile" : "Please enter valid mobile number"}'
+									data-bind="value: $root.model.alternateNumber" 
+								placeholder = "Family member contact number" />
+							</li><li class="dib validation-parent">
+								<label for="token-num">Father's / Husband's name*</label><input id="name-father" type = "text" required data-validation
+									data-error = '{"required" : "Please enter name of Father or Husband."}'
+									data-bind="value: $root.model.fathersName" 
+								placeholder = "Sangat's Father's name." />
+							</li><li class="dib validation-parent">
+								<label for="token-num">Mother's name*</label><input id="name-mother" type = "text" required data-validation
+									data-error = '{"required" : "Please enter name of Father or Husband."}'
+									data-bind="value: $root.model.mothersName" 
+								placeholder = "Sangat's Father's name." />
+							</li>
+						</ul>
+						<ul class="form-fields-wrap col-1">
+							<li id="address-form" class="catalog-fields address-wrap form-fields-wrap">
+								<div class="main-address dib validation-parent">
+									<label for="mainAdd1">Address*:</label>
+									<textarea id="mainAdd1" placeholder="Enter your address here" required data-validation data-error='{"required": "Address is mandatory"}' data-bind="value: $root.addDetails"></textarea>
+								</div><div class="city-state dib validation-parent">
+									<div class="field dib validation-parent">
+										<label for="city1">City*: 
+										</label><input type="text" id="city1" required placeholder="Enter city here" 
+											data-validation data-error='{"required": "City is mandatory"}' 
+											data-bind="autoComplete: addressList, value: $root.addCity, optionsText: 'city', optionsValue: 'city', autoCompleteOptions: {autoFocus: false}, populateOptions: [{inputId : 'add-state', optionId: 'addState', optionText : 'state'}, {inputId : 'add-pin', optionId: 'addPin', optionText : 'pin'}, {inputId: 'add-country', optionId: 'addCountry', optionText: 'country'}]"
+										/>
+									</div><div class="field dib">
+										<label for="city1">State: 
+										</label><input type="text" id="add-state" placeholder="View your State here" disabled data-bind="autoCompleteValue: $root.addState" />
+									</div><div class="field dib">
+										<label for="city1">Country: 
+										</label><input type="text" id="add-country" placeholder="View your Country here" disabled data-bind="autoCompleteValue: $root.addCountry" />
+									</div><div class="field dib">
+										<label for="city1">Pin: 
+										</label><input type="text" id="add-pin" placeholder="View your PIN here" disabled data-bind="autoCompleteValue: $root.addPin" />
+									</div>								
+								</div>
+							</li>
+						</ul>
+					</div>
+				</fieldset>
+				<fieldset class="resp-form operating-btn-wrap">
+                    <ul class="form-fields-wrap col-3">
+                        <li class="dib btn-wrap">
+                            <input type="button" value="Discard Changes" class="btn-white" data-bind="click: resetForm">
+                        </li><li class="dib btn-wrap">
+                            <input type="button" value="Save Changes" class="btn-blue" data-bind="click: saveDetails">
+                        </li><li class="dib btn-wrap">
+                            <input type="button" value="Save and Issue Token" class="btn-blue" data-bind="click: saveNIssueToken">
+                        </li>
+                    </ul>
+                </fieldset>
+				<ul class="hidden">
+					<li class = "dib validation-parent">
+						<label for="unique-id">Unique ID: </label><input id="unique-id" type = "text" data-bind="value: $root.model.uid" />
+					</li><!-- <li class = "dib validation-parent">
+						<label for="counter">Time of Registration: </label><input id="counter" type = "text" data-bind="value: $root.model.regTime" disabled/>
+					</li><li class = "dib validation-parent">
+						<label for="counter">Time of Last Update: </label><input id="counter" type = "text" data-bind="value: $root.model.updatedTime" disabled/>
+					</li><li class = "dib validation-parent">
+						<label for="status">Status*: </label><select id="status" data-bind="value: $root.model.status">
+							<option value="1">Active</option>
+						</select>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+		
+		<div id="issue-token" class="deposite-mobile remove">
+			<fieldset class="resp-form token-issue-wrap">
+				<h2>Issue Token</h2>
+				<ul class="form-fields-wrap col-1">
+					<li class = "dib validation-parent">
+						<label for="quantity">Phones Quantity*: </label><input id="quantity" type = "text" required 
+							data-validation = '{"onlyNumber" : "true"}'
+							data-error = '{"required" : "Please enter the number of mobiles.", "onlyNumber" : "Please enter numeric value only"}'
+							data-bind="value: $root.token.count" />
+					</li><li class = "dib validation-parent">
+						<label for="token-num">Token Number*: </label><input id="token-num" type = "text" required data-validation
+							data-error = '{"required" : "Please enter Token number."}'
+							data-bind="value: $root.token.tokenId"
+						placeholder = "Token Number of mobile" />
+					</li><!-- <li class = "dib validation-parent">
+						<label for="counter">Deposit Counter*: </label><input id="counter" type = "text" required data-validation
+							data-error = '{"required" : "Please enter Deposited Counter."}'
+							data-bind="value: $root.token.depositeCounter" 
+						placeholder = "Counter where mobile is deposit" />
+					</li> --><li class="dib btn-wrap">
+						<input type="button" value="Issue Token" class="btn-blue" data-bind="click: issueToken">
+					</li>
+				</ul>
+			</fieldset>
+		</div>
+		<footer>
+			<p> Copyright &copy; Radha Soami Satsang Beas</p>
+		</footer>
+		<script src="../Common/js/vendor/jquery.min.js"></script>
+		<script src="../Common/js/vendor/knockout.latest.min.js"></script>
+		<script src="../Common/js/vendor/knockout.mapping.js"></script>
+		<script src="../Common/js/vendor/jqueryUi.js"></script>
+		<script src="../Common/js/utilities.js"></script>
+		<script src="../Common/js/responsive.js"></script>	
+		<script src="../Common/js/autoComplete.js"></script>
+		<script src="js/mobileRegistration.js"></script>
+	</body>
+</html>
